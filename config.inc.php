@@ -28,13 +28,13 @@ return [
         'type'            => 'mysql',
 
         // 服务器地址
-        'hostname'        => 'localhost',
+        'hostname'        => '103.210.237.106',
         // 数据库名
-        'database'        => '201806yjw',
+        'database'        => 'yjwgodnesscc',
         // 数据库用户名
-        'username'        => 'root',
+        'username'        => 'hury',
         // 数据库密码
-        'password'        => 'root',
+        'password'        => 'hury',
 
         // 数据库连接DSN配置
         'dsn'             => '',

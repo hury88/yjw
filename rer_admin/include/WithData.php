@@ -505,8 +505,10 @@ class WithData
 
         );
 
+        uppro('img_path',$fields,'ajax');
+
         $this->logInsert = '';
-        $this->logUpdate = '车型修改';
+        $this->logUpdate = '商品修改';
         return $fields;
     }
 

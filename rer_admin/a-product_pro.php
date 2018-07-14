@@ -53,17 +53,20 @@ if (isset($_GET['action']) && $_GET['action']=='delImg') {
 /*$opt->verify('')->input('页面标题','seotitle')->input('页面关键字','keywords')->textarea('页面描述','description');*/
 
     //$d2 = M('news')->where('pid=1 and ty=9')->order('disorder desc, isgood desc, id asc')->getField('id,title');Output::select($d2,'城市','city_id');
+
+    $seriesModel = ModelFactory('brandModels');
+//    $opt
+//        ->groupSelect($d, $groupCate,'品牌','brand_id', 'initials');
     $opt
-        ->groupSelect($d, $groupCate,'品牌','brand_id', 'initials');
-    $opt
+        ->input('图片','img_path')
         ->input('名称','prod_name')
         ->cache()
             ->input('价格','price')
         ->flur()
-        ->choose('型号','version')->radiobox($)
-        ->choose('色号','prod_color')->radiobox($)
-        ->choose('镜框尺寸','mirr_width')->radiobox($)
-        ->choose('鼻梁尺寸','nose_width')->radiobox($)
+        ->choose('型号','version')->radiobox( $seriesModel->explode('version', $brand_id) )
+        ->choose('色号','prod_color')->radiobox( $seriesModel->explode('prod_color', $brand_id) )
+        ->choose('镜框尺寸','mirr_width')->radiobox( $seriesModel->explode('mirr_width', $brand_id) )
+        ->choose('鼻梁尺寸','nose_width')->radiobox( $seriesModel->explode('nose_width', $brand_id) )
     ;
 
 include('js/foot');

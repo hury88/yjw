@@ -20,4 +20,22 @@ class BrandModels extends Model
     const TABLE = 'brand_models';
     const TABLE_ORDER = 'isgood desc, disorder desc, sendtime desc, id asc';
 
+    /**
+     * @param $field
+     *  ['version', 'prod_color', 'mirr_width', 'nose_width']; #以,隔开
+     * @param $brand_id
+     * @return array
+     */
+    public function explodeResult($field, $brand_id)
+    {
+        $brandModelsFind= $this->selectOne($type.',id as theindex', 'isstate=1 and brand_id = '.$brand_id);
+
+        $brandModelsFindTypeData= [];
+
+        if($brandModelsFind && strpos($brandModelsFind[$type], ',')){
+
+            $brandModelsFindTypeData = explode(',', $brandModelsFind[$type]);
+        }
+        return $brandModelsFindTypeData;
+    }
 }

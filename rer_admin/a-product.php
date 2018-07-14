@@ -74,7 +74,7 @@ $opt = new Output;//输出流  输出表单元素
                     <td width="24px">编号</td> <td width="209px">操作</td>
 
                     <?php
-                    $opt->td('系列','型号', '色号', '镜框尺寸', '鼻梁尺寸', '框型', '款式');
+                    $opt->td('图片','系列','型号', '色号', '镜框尺寸', '鼻梁尺寸', '框型', '款式');
 
                     $opt->td('发布时间_|_width="104px"');
                     ?>
@@ -108,7 +108,8 @@ $opt = new Output;//输出流  输出表单元素
                     <?php
 
                     $opt->td(
-                        $prod_name
+                         $img_path
+                        ,$prod_name
                         ,$version
                         ,$prod_color
                         ,$mirr_width
