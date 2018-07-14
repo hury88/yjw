@@ -1,0 +1,27 @@
+{
+	"require": {
+	},
+    "autoload": {
+	    "files": [
+	         "app/helpers/web.php",
+	         "app/helpers/web_pc.php",
+	         "app/helpers/web_wap.php",
+	         "app/helpers/admin.php",
+	         "core/helpers/all.php",
+	         "core/helpers/helper.php",
+
+	         "vendor/blade-5.4/src/helpers.php"
+	    ],
+	    "classmap": [
+	        "vendor/system",
+	        "vendor/myvendor"
+	    ],
+	    "psr-4": {
+	    	"Core\\" : "core/library",
+	    	"Admin\\" : "rer_admin/include",
+	    	"App\\" : "app",
+	    	"Vendor\\" : "vendor",
+	    	"Xiaoler\\Blade\\" : "vendor/blade-5.4/src"
+	    }
+	}
+}

@@ -1,0 +1,69 @@
+[05-Feb-2018 06:57:46 PRC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/cvmflwhn/public_html/yeduhui/app/helpers/functions/admin.php on line 49
+[06-Feb-2018 09:01:48 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 13
+[06-Feb-2018 09:01:48 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 16
+[06-Feb-2018 09:01:48 PRC] PHP Notice:  Array to string conversion in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 19
+[06-Feb-2018 09:01:50 PRC] PHP Notice:  Undefined offset: 0 in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 14
+[06-Feb-2018 09:01:50 PRC] PHP Notice:  Undefined offset: 1 in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 17
+[06-Feb-2018 09:01:50 PRC] PHP Notice:  Array to string conversion in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 19
+[06-Feb-2018 09:01:55 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 13
+[06-Feb-2018 09:01:55 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 16
+[06-Feb-2018 09:01:55 PRC] PHP Notice:  Array to string conversion in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 19
+[06-Feb-2018 09:01:57 PRC] PHP Notice:  Undefined offset: 0 in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 14
+[06-Feb-2018 09:01:57 PRC] PHP Notice:  Undefined offset: 1 in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 17
+[06-Feb-2018 09:01:57 PRC] PHP Notice:  Array to string conversion in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 19
+[06-Feb-2018 09:05:14 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 12
+[06-Feb-2018 09:05:14 PRC] PHP Notice:  Array to string conversion in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 15
+[06-Feb-2018 09:05:14 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 22
+[06-Feb-2018 09:05:14 PRC] PHP Notice:  Array to string conversion in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 25
+[06-Feb-2018 09:05:16 PRC] PHP Notice:  Array to string conversion in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 23
+[06-Feb-2018 09:05:16 PRC] PHP Notice:  Array to string conversion in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 13
+[06-Feb-2018 09:05:18 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 12
+[06-Feb-2018 09:05:18 PRC] PHP Notice:  Array to string conversion in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 15
+[06-Feb-2018 09:05:18 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 22
+[06-Feb-2018 09:05:18 PRC] PHP Notice:  Array to string conversion in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 25
+[06-Feb-2018 09:05:20 PRC] PHP Notice:  Array to string conversion in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 23
+[06-Feb-2018 09:05:20 PRC] PHP Notice:  Array to string conversion in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 13
+[06-Feb-2018 09:05:27 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 12
+[06-Feb-2018 09:05:27 PRC] PHP Notice:  Array to string conversion in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 15
+[06-Feb-2018 09:05:27 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 22
+[06-Feb-2018 09:05:27 PRC] PHP Notice:  Array to string conversion in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 25
+[06-Feb-2018 09:05:32 PRC] PHP Notice:  Array to string conversion in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 23
+[06-Feb-2018 09:05:32 PRC] PHP Notice:  Array to string conversion in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 13
+[06-Feb-2018 09:11:08 PRC] PHP Notice:  Array to string conversion in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 13
+[06-Feb-2018 09:11:08 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 14
+[06-Feb-2018 09:11:52 PRC] PHP Notice:  Array to string conversion in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 13
+[06-Feb-2018 09:11:52 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 14
+[06-Feb-2018 09:12:06 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 14
+[06-Feb-2018 09:12:06 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 20
+[06-Feb-2018 09:17:26 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 14
+[06-Feb-2018 09:17:26 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 20
+[06-Feb-2018 09:18:46 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 14
+[06-Feb-2018 09:18:46 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 20
+[06-Feb-2018 09:21:16 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 14
+[06-Feb-2018 09:21:16 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 20
+[06-Feb-2018 09:21:18 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 14
+[06-Feb-2018 09:21:18 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 20
+[06-Feb-2018 09:21:21 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 14
+[06-Feb-2018 09:21:21 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 20
+[06-Feb-2018 09:21:28 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 14
+[06-Feb-2018 09:21:28 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 20
+[06-Feb-2018 09:21:31 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 14
+[06-Feb-2018 09:21:31 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 20
+[06-Feb-2018 09:22:29 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 14
+[06-Feb-2018 09:22:29 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 20
+[06-Feb-2018 09:22:33 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 14
+[06-Feb-2018 09:22:33 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 20
+[06-Feb-2018 09:22:43 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 14
+[06-Feb-2018 09:22:43 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 20
+[06-Feb-2018 09:23:06 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 14
+[06-Feb-2018 09:23:06 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 20
+[06-Feb-2018 09:23:37 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 14
+[06-Feb-2018 09:23:37 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 20
+[06-Feb-2018 09:24:00 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 14
+[06-Feb-2018 09:24:00 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 20
+[06-Feb-2018 09:24:03 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 14
+[06-Feb-2018 09:24:03 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 20
+[06-Feb-2018 09:24:58 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 14
+[06-Feb-2018 09:24:58 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 20
+[06-Feb-2018 09:25:03 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 14
+[06-Feb-2018 09:25:03 PRC] PHP Warning:  Invalid argument supplied for foreach() in /home/cvmflwhn/public_html/yeduhui/web_manage/include/json.php on line 20

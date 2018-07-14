@@ -1,0 +1,275 @@
+﻿/* 闂堛垹瀵樼仦锟�/
+.bread {
+  line-height: 45px;
+  font-size: 14px;
+}
+/* 閸愬懎顔愰柈銊ュ瀻 */
+.content .left {
+	width: 175px;
+}
+.content .left ul {
+	margin-top: 20px;
+}
+.content .left ul li {
+	line-height: 28px;
+	font-size: 14px;
+}
+.content .left ul li.name {
+	font-size: 15px;
+	font-weight: bold;
+}
+.content .left ul li span {
+	display: block;
+	padding-left: 10px;
+	font-size: 16px;
+	color: #0093ff;
+}
+.content .right {
+	width: 1025px;
+}
+.content .right .price_head {
+	width: 100%;
+	height: 80px;
+}
+.content .right .price_head .price_logo {
+	height: 22px;
+	line-height: 22px;
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+.content .right .price_head .price_logo i {
+	display: inline-block;
+	vertical-align: middle;
+	width: 28px;
+	height: 23px;
+	background: url("../../skuimage/comparePrice.png") 0 -34px;
+	margin: 0 10px;
+}
+.content .right .price_head .flow {
+	width: 395px;
+	height: 55px;
+	background: url("../../skuimage/flow.png") no-repeat;
+}
+.content .right .price_head .flow.two {
+	background-position: 0 -112px;
+}
+.content .right .price_head .flow.three {
+	background-position: 0 -243px;
+}
+.content .right .havegoods .con {
+	border-bottom: 1px solid #000;
+}
+.content .right .havegoods .con span.mon {
+	color: #0093ff;
+}
+.content .right .havegoods .con ul.title {
+	background: #666;
+}
+.content .right .havegoods .con ul.title li {
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	color: #fff;
+}
+.content .right .havegoods .con li {
+	width: 12%;
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+	text-align: center;
+	border-right: 1px solid #ccc;
+}
+.content .right .havegoods .con li.b44 {
+	width: 43%;
+}
+.content .right .havegoods .con li.b44 em {
+	margin-right: 20px;
+	padding-left: 10px;
+	cursor: pointer;
+}
+.content .right .havegoods .con li.b44 em i {
+	display: inline-block;
+	vertical-align: middle;
+	width: 12px;
+	height: 7px;
+	background: url("../../skuimage/comparePrice.png") -21px -74px no-repeat;
+	margin-right: 5px;
+}
+.content .right .havegoods .con li.b44 em.down i {
+	background-position: -4px -74px;
+}
+.content .right .havegoods .con li.b44 span {
+	margin-left: 15px;
+	width: 280px;
+	text-align: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	cursor:pointer;
+}
+.content .right .havegoods .con li.b8 {
+	width: 8%;
+	border: none;
+}
+.content .right .havegoods .con li.none {
+	border: none;
+}
+.content .right .havegoods .con .list_con {
+	width: 100%;
+}
+.content .right .havegoods .con .list_con ul.all_goods {
+	border-top: 1px solid #ececec;
+}
+.content .right .havegoods .con .list_con ul.all_goods span.name {
+	color: #0093ff;
+}
+.content .right .havegoods .con .list_con ul.all_goods span.mon {
+	font-weight: bold;
+}
+.content .right .havegoods .con .list_con ul.all_goods .checkbox {
+	width: 20px;
+	height: 20px;
+	float:left;
+	margin-top:15px;
+	margin-left: 40px;
+	cursor: pointer;
+}
+.content .right .havegoods .con .list_con .good {
+	background: #eee;
+	border-top: 1px solid #ccc;
+}
+.content .right .havegoods .con .list_con .good .checkbox {
+	width: 18px;
+	height: 18px;
+	margin-left: 50px;
+	float:left;
+	margin-top:25px;
+}
+.content .right .havegoods .con .list_con .good li {
+	height: 65px;
+	line-height: 65px;
+}
+.content .right .havegoods .con .list_con .good:hover .b44 span{ color:#0093ff}
+.content .right .havegoods .con .list_con .good li img {
+	width: 126px;
+	height: 65px;
+}
+.content .right .havegoods .con .list_con .good li p {
+	width: 91px;
+	height: 27px;
+	border: 1px solid #ccc;
+	margin: 18px auto;
+	line-height: 27px;
+}
+.content .right .havegoods .con .list_con .good li p i {
+	float: left;
+	width: 25px;
+	height: 27px;
+	font-size: 22px;
+	text-align: center;
+	color: #666;
+	cursor: pointer;
+}
+.content .right .havegoods .con .list_con .good li p input {
+	float: left;
+	width: 38px;
+	height: 27px;
+	border: 1px solid #ccc;
+	border-width: 0 1px 0 1px;
+	background: #eee;
+	text-align: center;
+}
+.content .right .havegoods .con .list_con .good.single {
+	background: #fff;
+}
+.content .right .havegoods .con .list_con .good.single input {
+	width: 20px;
+	height: 20px;
+	margin-left: 40px;
+	margin-top:25px;
+	float:left
+}
+.content .right .havegoods .con .list_con .good.single a {
+	margin: 0 10px;
+}
+.content .right .havegoods .total {
+	margin-top: 10px;
+}
+.content .right .havegoods .total li {
+	height: 45px;
+	line-height: 45px;
+}
+.content .right .havegoods .total li input {
+	width: 20px;
+	height: 20px;
+	margin-left: 50px;
+	float:left;
+	margin-top:14px;
+
+}
+.content .right .havegoods .total li.b8 {
+	width: 8%;
+}
+.content .right .havegoods .total li.b44 {
+	width: 43%;
+	padding-left: 20px;
+	font-size: 14px;
+}
+.content .right .havegoods .total li.b44 span {
+	margin-left: 20px;
+	font-size: 14px;
+}
+.content .right .havegoods .total li.b44 span em {
+	font-weight: bold;
+	color: #0093ff;
+	margin: 0 5px;
+}
+.content .right .havegoods .total li a {
+	display: inline-block;
+	vertical-align: middle;
+	width: 105px;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+	background: #e3e3e3;
+	font-size: 16px;
+	margin: 0 10px;
+}
+.content .right .havegoods .total li a.submit {
+	background: #0093ff;
+	color: #fff;
+}
+.content .right .nogoods {
+	width: 100%;
+}
+.content .right .nogoods .null {
+	width: 200px;
+	margin: 100px auto;
+}
+.content .right .nogoods .null img {
+	display: block;
+	width: 100%;
+}
+.content .right .nogoods .null p {
+	width: 100%;
+	text-align: center;
+	line-height: 50px;
+	font-size: 18px;
+}
+.content .right .nogoods .null p a {
+	color: #0093ff;
+	text-decoration: underline;
+}
+
+.content a
+{
+	cursor: pointer;
+}
+
+.content a:hover
+{
+	color:#0093ff;
+}
+.fahuofang input{ width:20px; height:20px; margin-left:20px; margin-top:16px;}

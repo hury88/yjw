@@ -1,0 +1,349 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+ <meta name="renderer" content="webkit">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>镜片选择</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/jpselect.css">
+	<link rel="stylesheet" href="css/perfect-scrollbar.css">
+	 <link href="images/favicon1.ico" rel="icon" type="image/x-icon" />
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+      <script src="js/perfect-scrollbar.js"></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="head">
+		<!-- 顶部 -->
+		<div class="head_box">
+            <div class="wrap">
+                <div class="fn-left left">
+                    <span class="fn-left welcome">您好 找眼镜网欢迎您！</span>
+                    <div class="person fn-left fn-hide haslogin">
+                        <span class="icon"></span>
+                        <span class="phone">17871837418</span><a class="loginOut" href="">退出</a>
+                    </div>
+                    <div class="person fn-left haslogout">
+                        <!-- <i>请您</i><a class="btn login" href="#">登录</a> -->
+                        <a class="btn homeRegBt mendianReg">门店注册</a>
+                        <a class="btn homeRegBt supplierReg">供应商注册</a>
+                        <a href="forget.html" class="btn homeRegBt">找回密码</a>
+                    </div>
+                </div>
+                <div class="fn-right right">
+                    <a href="" class="cartBt"><i class="cart"></i><span>购物车</span></a>
+                    <a href="" class="muOrderBt"><i class="order"></i><span>订单</span></a>
+                    <a href="" class="center person"><i class="personIcon"></i><span>个人中心</span></a>
+                </div>
+            </div>
+        </div>
+        <!-- logo部分 -->
+        <div class="head_logo">
+            <div class="wrap fn-clear">
+                <div class="fn-left logo">
+                    <a href="#">
+                        <img src="picture/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="loginBox fn-left">
+                    <div class="topBlock">
+                        <a class="login" href="javascript:;">门店登录</a>
+                        <a class="loginSupplier" >供应商入驻</a>
+                    </div>
+                  <div class="bottomBlock">
+                        <p><i class="tel"></i>18013382890（客服电话和微信号）</p>
+                    	<p><i class="tel"></i>18013380871（客服电话和微信号）</p>
+                    </div>
+                </div>
+                <div class="search_box fn-left">
+                    <div class="search fn-clear">
+                        <input class="fn-left search_text" type="text" value="请输入商品关键词搜索或商品编号搜索" 
+                        onFocus="if(value=='请输入商品关键词搜索或商品编号搜索'){value=''}" onBlur="if(value==''){value ='请输入商品关键词搜索或商品编号搜索'}">
+                        <input type="button" class="fn-left btn">
+                    </div>
+                </div>
+                <div class="fn-right erweima">
+                    <img src="picture/smallac.png" alt="">
+                </div>
+            </div>
+        </div>
+		<!-- 导航部分 -->
+		<div class="nav">
+			<div class="wrap">
+				<div class="all_goods active" href="#">全部商品
+					<ul class="bannerLeftUl">
+						<li data-value="0">
+							<a href="#">
+								<i class="icon01"></i>
+								<span>镜片</span>
+							</a>
+						</li>
+						<li data-value="4">
+							<a href="#">
+								<i class="icon02"></i>
+								<span>镜架</span>
+							</a>
+						</li>
+						<li data-value="7">
+							<a href="#">
+								<i class="icon03"></i>
+								<span>太阳镜</span>
+							</a>
+						</li>
+						<li data-value="6">
+							<a href="#">
+								<i class="icon04"></i>
+								<span>功能眼镜</span>
+							</a>
+						</li>
+						<li data-value="2">
+							<a href="#">
+								<i class="icon05"></i>
+								<span>其他</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+	                <a class="nav_btn" href="business.html">找商家</a>
+	                <a class="nav_btn" href="index.html">首页</a>
+	                <a class="nav_btn" href="message.html">资讯</a>
+			</div>
+		</div>
+	</div>	
+
+	<!-- 门店登录 -->
+    <div class="login_box loginPop" style="display: none">
+        <div class="login"> <img class="close" src="picture/close.png">
+            <h2>账户登录</h2>
+            <ul>
+                <li>
+                    <input type="text" class="ipt" placeholder="登录名" value="" name="phone" id="account">
+                </li>
+                <li>
+                    <input type="password" class="ipt" placeholder="密码" value="" name="phone" id="pwd">
+                </li>
+                <li>
+                    <button class="btn loginBt">立即登录</button>
+                </li>
+            </ul>
+            <p class="null" style="display: none;">*用户名或者密码不能为空</p>
+            <div class="go_register"> <a class="registerBt">免费注册</a>
+                <div class="clr"></div>
+            </div>
+        </div>
+    </div>
+	<!-- 面包屑 -->
+	<div class="bread wrap">
+		<a href="#">首页</a>><a href="#">镜片</a>><a href="#">品牌</a>><a href="#">目录表</a>
+	</div>
+
+	<!-- 内容部分 -->
+	<div class="content wrap fn-clear">
+		<!-- 左边 -->
+		<div class="fn-left left">
+			<div class="box">
+			</div>
+		</div>
+		<!-- 右边 -->
+		<div class="fn-right right">
+			<div class="title">
+				<img src="" alt="">
+			</div>
+			<div class="fahuofang fn-clear" style="font-size:14px;">
+				<p class="name"><span>发货方：</span>由以下省份发货</p>
+				<p><span>南部仓</span>：广西、贵州、广东、福建、海南</p>
+				<p><span>中部仓</span>：陕西、重庆、河南、湖北、湖南</p>
+				<p><span>东部仓</span>：上海、江苏、浙江、安徽、山东、江西</p>
+				<p><span>西部仓</span>：新疆、西藏、青海、甘肃、四川、云南</p>
+				<p><span>北部仓</span>：宁夏、内蒙、北京、天津、河北、山西、辽宁、吉林、黑龙江</p>
+			</div>
+			<div class="ppCon">
+				品牌<span></span>
+			</div>
+			<div class="select1">
+				<div class="list1">
+					<div class="line1">
+						<span class="fn-left">系列</span>
+						<div class="options1 jj_option">
+						</div>
+						<i></i>
+					</div>
+				</div>
+			</div>
+			<!-- 选项 -->
+			<div class="select">
+				<div class="list pinzhong">
+					<div class="line">
+						<span class="fn-left">品种</span>
+						<div class="options" data-type="1">
+						</div>
+						<i></i>
+					</div>
+				</div>
+				<div class="list zheshelv">
+					<div class="line">
+						<span class="fn-left">折射率</span>
+						<div class="options" data-type="2">
+						</div>
+						<i></i>
+					</div>
+				</div>
+				<div class="list bmsheji">
+					<div class="line">
+						<span class="fn-left">表面设计</span>
+						<div class="options" data-type="3">
+						</div>
+						<i></i>
+					</div>
+				</div>
+				<div class="list moceng">
+					<div class="line">
+						<span class="fn-left">膜层</span>
+						<div class="options" data-type="4">
+						</div>
+						<i></i>
+					</div>
+				</div>
+				<div class="list dingzhi">
+					<div class="line">
+						<span class="fn-left">是否定制</span>
+						<div class="options" data-type="5">
+							<a href="javascript:;" data-value="0">现片</a>
+							<a href="javascript:;" data-value="1">定制片</a>
+						</div>
+						<i></i>
+					</div>
+				</div>
+				<div class="list ranse">
+					<div class="line">
+						<span class="fn-left">染色</span>
+						<div class="options" data-type="6">
+						</div>
+						<i></i>
+					</div>
+				</div>
+				<div class="list seban">
+					<div class="line">
+						<span class="fn-left">色板</span>
+						<div class="options" data-type="7">
+						</div>
+						<i></i>
+					</div>
+				</div>
+			</div>
+
+			<!-- 筛选条件 -->
+			<div class="cond">
+				<span class="cond_title fn-left">已选条件</span>
+				<div class="con fn-left">
+				</div>
+				<span class="del fn-right">清除选择</span>
+			</div>
+			<!-- 筛选结果 -->
+			<div class="jp_con">
+				
+			</div>
+			<div class="but"><a href="javascript:;">显示更多</a></div>
+		</div>
+	</div>
+
+
+	<!-- 底部 -->
+	<div class="footer">
+		<div class="server wrap fn-clear">
+			<dl>
+				<dt class="you"></dt>
+				<dd class="t">正品保障</dd>
+				<dd>100%正品</dd>
+			</dl>
+			<div class="line"></div>
+			<dl>
+				<dt class="xin"></dt>
+				<dd class="t">无忧购物</dd>
+				<dd>7天无理由退货</dd>
+			</dl>
+			<div class="line"></div>
+			<dl>
+				<dt class="hui"></dt>
+				<dd class="t">零单批发</dd>
+				<dd>无采购限制</dd>
+			</dl>
+			<div class="line"></div>
+			<dl>
+				<dt class="bian"></dt>
+				<dd class="t">在线支付</dd>
+				<dd>银联支付宝</dd>
+			</dl>
+		</div>
+		<div class="bot_box">
+		  	<ul>
+                <li>
+                    <p>关于我们</p>
+                    <a data-href="about_01.jsp" class="company">公司简介</a>
+                    <a data-href="contact.jsp" class="contact">联系我们</a>
+                </li>
+                <li>
+                    <p>购物指南</p>
+                    <a data-href="buy.jsp" class="buyProcess">购物流程</a>
+                </li>
+                <li>
+                    <p>配送方式</p>
+                    <a data-href="kuaidi.jsp" class="hzkd">合作快递</a>
+                    <a data-href="question.jsp" class="pscjwt">配送常见问题</a>
+                </li>
+                <li>
+                    <p>支付方式</p>
+                    <a data-href="fahuo.jsp" class="kdfh">在线支付</a>
+                    <a data-href="pay.jsp" class="hdfk">按合同发货</a>
+                    <a data-href="fapiao.jsp" class="syfp">索要发票</a>
+                </li>
+                <li>
+                    <p>售后服务</p>
+                    <a data-href="contact.jsp" class="thhlc">联系我们</a>
+                </li>
+                <li>
+                    <p>用户说明</p>
+                    <a data-href="member_01.jsp" class="qyzc">企业注册</a>
+                </li>
+                <li>
+                    <p>帮助</p>
+                    <a data-href="help.jsp" class="kfzx">客服中心</a>
+                    <a data-href="statement.jsp" class="mzsm">免责申明</a>
+                    <a data-href="advice.jsp" class="tsyjy">投诉与建议</a>
+                </li>
+            </ul>
+		  	<div class="img">
+		  		<p>进入微信商城</p>
+		  		<img  src="picture/code.png">
+		  	</div>
+	 	</div>
+	 	<div class="info">
+	 		找眼镜网 @2013-2018 南京起舵电子商务有限公司版权所有 苏ICP备 16001801号
+	 	</div>
+	</div>
+	<!-- 右侧导航 -->
+	<div class="sideNav">
+        <a href="javascript:;" class="muOrderBt"><p>我的订单</p><i></i></a>
+        <a href="javascript:;" class="cartBt"><p>购物车</p><i class="gwc"></i></a>
+        <!-- <a href="#"><p>我的足迹</p><i class="zj"></i></a> -->
+        <!--<a href="#"><p>充值</p><i class="cz"></i></a>-->
+        <a href="#"><p>二维码</p><i class="ewm"></i></a>
+        <a href="javascript:;"><p>回到顶部</p><i class="toTop"></i></a>
+    </div>
+       <script>
+           $(".bot_box li a").click(function(){
+		           var t = $(this), href = t.attr("data-href");
+			           window.open(domain+"/"+href)
+				       })
+       </script>
+	<script src="js/main.js"></script>
+	<script src="js/login.js"></script>
+	<script src="js/allsearch.js"></script>
+
+	<script src="js/public_bak.js"></script>
+	<script src="js/jpproduct.js"></script>
+</body>
+</html>

@@ -1,0 +1,419 @@
+﻿
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>找眼镜网</title>
+
+    <link rel="stylesheet" href="css/mybase.css">
+    <link rel="stylesheet" href="css/myinfo.css">
+    <link href="images/favicon1.ico" rel="icon" type="image/x-icon" />
+    <script src="js/jquery-1.9.0.js"></script>
+    <script type="text/javascript">
+
+
+
+        function setRed(field){
+            document.getElementById(field).color = "red";
+        }
+
+        function setGreen(field){
+            document.getElementById(field).color = "green";
+        }
+
+        function checkPassword(){
+            var reg = /^[a-zA-Z0-9]{6,20}$/g;
+            var pwd = document.getElementById("cust_old_pwd").value;
+            if(pwd == "" || !reg.test(pwd)){
+                setRed("msg_old");
+                return false;
+            }
+
+            setGreen("msg_old");
+            return true;
+        }
+
+        function checkNewPassword(){
+            var reg = /^[a-zA-Z0-9]{6,20}$/g;
+            var pwd = document.getElementById("cust_new_pwd").value;
+            if(pwd == "" || !reg.test(pwd)){
+                setRed("msg_new");
+                return false;
+            }
+
+            var re_pwd = document.getElementById("cust_pwd").value;
+            if(pwd == re_pwd){
+                $("#msg")[0].innerHTML = "";
+            }
+
+            setGreen("msg_new");
+            return true;
+        }
+
+
+        function checkRePassword(){
+            var reg = /^[a-zA-Z0-9]{6,20}$/g;
+            //新密码
+            var new_pwd = document.getElementById("cust_new_pwd").value;
+            //确认新密码
+            var pwd = document.getElementById("cust_pwd").value;
+
+            if(pwd == "" || !reg.test(pwd)){
+                $("#msg")[0].innerHTML = "密码请设为6-20位字母或数字";
+                return false;
+            }
+
+            if(new_pwd != pwd){
+                $("#msg")[0].innerHTML = "两次输入密码不一致";
+                return false;
+            }
+
+            $("#msg")[0].innerHTML = "";
+            return true;
+        }
+
+        function validate(){
+
+            //验证表单是否可以提交
+            if(!checkNewPassword() || !checkRePassword()){
+                return false;
+            }
+            return true;
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+
+
+
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/new/base.css">
+<div class="head">
+    <!-- 顶部 -->
+    <div class="head_box">
+        <div class="wrap">
+            <div class="fn-left left">
+                <span class="fn-left welcome">您好 找眼镜网欢迎您！</span>
+                <div class="person fn-left fn-hide haslogin">
+                    <span class="icon"></span>
+                    <span class="phone">17871837418</span><a class="loginOut" href="">退出</a>
+                </div>
+                <div class="person fn-left haslogout">
+                    <!-- <i>请您</i><a class="btn login" href="#">登录</a> -->
+                    <a class="btn homeRegBt">门店注册</a>
+                    <a class="btn homeRegBt">供应商注册</a>
+                    <a href="http://www.zyanjing.com/forget.html?" class="btn homeRegBt">找回密码</a>
+                </div>
+            </div>
+            <div class="fn-right right">
+                <a href="" class="cartBt"><i class="cart"></i><span>购物车</span></a>
+                <a href="" class="muOrderBt"><i class="order"></i><span>订单</span></a>
+                <a href="" class="person center"><i class="personIcon"></i><span>个人中心</span></a>
+            </div>
+        </div>
+    </div>
+    <!-- logo部分 -->
+    <div class="head_logo">
+        <div class="wrap fn-clear">
+            <div class="fn-left logo">
+                <a href="http://www.zyanjing.com">
+                    <img src="images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="loginBox fn-left">
+                <div class="topBlock">
+                    <a class="login" href="javascript:;">门店登录</a>
+                    <a class="loginSupplier" href="javascript:;">供应商入驻</a>
+                </div>
+                <div class="bottomBlock">
+                    <p><i class="tel"></i>18013382890（客服电话和微信号）</p>
+                    <p><i class="tel"></i>18013380871（客服电话和微信号）</p>
+                </div>
+            </div>
+            <div class="search_box fn-left">
+                <div class="search fn-clear">
+                    <input class="fn-left search_text" type="text" value="请输入商品关键词搜索或商品编号搜索"
+                           onFocus="if(value=='请输入商品关键词搜索或商品编号搜索'){value=''}" onBlur="if(value==''){value ='请输入商品关键词搜索或商品编号搜索'}">
+                    <input type="button" class="fn-left btn">
+                </div>
+            </div>
+            <div class="fn-right erweima">
+                <img src="images/smallAC.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- 导航部分 -->
+    <div class="nav">
+        <div class="wrap">
+            <div class="all_goods active" href="#">全部商品
+                <ul class="bannerLeftUl">
+                    <li data-value="0">
+                        <a href="http://www.zyanjing.com/eyeglass.html?0">
+                            <i class="icon01"></i>
+                            <span>镜片</span>
+                        </a>
+                    </li>
+                    <li data-value="4">
+                        <a href="http://www.zyanjing.com/eyeglass.html?4">
+                            <i class="icon02"></i>
+                            <span>镜架</span>
+                        </a>
+                    </li>
+                    <li data-value="7">
+                        <a href="http://www.zyanjing.com/eyeglass.html?7">
+                            <i class="icon03"></i>
+                            <span>太阳镜</span>
+                        </a>
+                    </li>
+                    <li data-value="6">
+                        <a href="http://www.zyanjing.com/eyeglass.html?6">
+                            <i class="icon04"></i>
+                            <span>功能眼镜</span>
+                        </a>
+                    </li>
+                    <li data-value="2">
+                        <a href="http://www.zyanjing.com/eyeglass.html?2">
+                            <i class="icon05"></i>
+                            <span>其他</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a class="nav_btn index" href="http://www.zyanjing.com/">找商家</a>
+            <a class="nav_btn index" href="http://www.zyanjing.com/">首页</a>
+            <a class="nav_btn" href="#">资讯</a>
+        </div>
+    </div>
+</div>
+
+<!-- 门店登录 -->
+<div class="login_box loginPop" style="display: none">
+    <div class="login"> <img class="close" src="images/close.png">
+        <h2>账户登录</h2>
+        <ul>
+            <li>
+                <input type="text" class="ipt" placeholder="登录名" value="" name="phone" id="account">
+            </li>
+            <li>
+                <input type="password" class="ipt" placeholder="密码" value="" name="phone" id="pwd">
+            </li>
+            <li>
+                <button class="btn loginBt">立即登录</button>
+            </li>
+        </ul>
+        <p class="null" style="display: none;">*用户名或者密码不能为空</p>
+        <div class="go_register"> <a class="registerBt">免费注册</a>
+            <div class="clr"></div>
+        </div>
+    </div>
+</div>
+<!-- 供应商入驻 -->
+<div class="login_boxSupplier loginPop" style="display: none">
+    <div class="login"> <img class="close" src="images/close.png">
+        <h2>供应商账户登录</h2>
+        <ul>
+            <li>
+                <input type="text" class="ipt" placeholder="登录名" value="" name="phone" id="account">
+            </li>
+            <li>
+                <input type="password" class="ipt" placeholder="密码" value="" name="phone" id="pwd">
+            </li>
+            <li>
+                <button class="btn loginBt">立即登录</button>
+            </li>
+        </ul>
+        <p class="null" style="display: none;">*用户名或者密码不能为空</p>
+        <div class="go_register"> <a class="registerBt">供应商免费注册</a>
+            <div class="clr"></div>
+        </div>
+    </div>
+</div>
+<div class="sideNav">
+    <a href="javascript:;" class="muOrderBt"><p>我的订单</p><i></i></a>
+    <a href="javascript:;" class="cartBt"><p>购物车</p><i class="gwc"></i></a>
+    <!--         <a href="#"><p>充值</p><i class="cz"></i></a> -->
+    <a href="#"><p>二维码</p><i class="ewm"></i></a>
+    <a href="javascript:;"><p>回到顶部</p><i class="toTop"></i></a>
+</div>
+<script>
+    var parentId = 'null'
+</script>
+<script src="js/constant.js"></script>
+<script src="js/login.js"></script>
+<script src="js/common.js"></script>
+<script src="js/allearch.js"></script>
+<!-- 面包屑 -->
+<div class="bread wrap">
+    <a href="#">首页</a>><a href="#">个人信息管理</a>><a href="#">密码修改</a>
+</div>
+<!-- 内容部分 -->
+<div class="content wrap fn-clear">
+
+
+
+
+
+
+
+
+    <script src="common/js/jquery.cookie.js"></script>
+
+    <div class="fn-left left">
+        <ul>
+            <li class="name">账户管理</li>
+            <li>账户<span class="balance"></span></li>
+            <li><a href="usercoupon.shtml">优惠券</a></li>
+        </ul>
+        <ul>
+            <li class="name">订单管理</li>
+            <li><a href="order.shtml" target="_parent">我的所有订单</a></li>
+            <li><a href="skuPhhOrderList.jsp" target="_parent">我的拼订单</a></li>
+            <li><a href="order.shtml?os=n" target="_parent">未完成订单</a></li>
+            <li><a href="order.shtml?os=y" target="_parent">已完成订单</a></li>
+            <li><a href="skuCartInfoList.jsp" target="_parent">我的购物车</a></li>
+        </ul>
+        <ul>
+            <li class="name">个人信息管理</li>
+            <li><a href="myinfo.jsp">我的资料</a></li>
+            <li><a href="updPwd.jsp">密码修改</a></li>
+            <li><a href="address.shtml">收货地址</a></li>
+            <li><a href="childMemberList.jsp">子账户列表</a></li>
+
+        </ul>
+    </div>
+    <script>
+        console.log(parentId);
+        if(parentId != null && parentId != "" && parentId != 'null')
+        {
+
+        }
+        else
+        {
+            if(0.0 > 0){
+                $('.balance').html(0.0+"元");
+            }
+
+        }
+    </script>
+    <div class="fn-right right">
+        <div class="price_head fn-clear">
+            <div class="fn-left info_logo">
+                <i></i>密码修改
+            </div>
+        </div>
+        <p class="modify">密码是您登录的重要凭证之一，可以是数字或字母的组合。</p>
+        <form name="updPwd" id="updPwd" class="validate" method="post" action="userUpd.shtml" onsubmit="return validate();">
+            <table width="70%" border="0" cellspacing="0" cellpadding="0" class="biaoge3">
+                <tr>
+                    <td align="right" bgcolor="#F0F0F0">请输入您的原密码：</td>
+                    <td bgcolor="#F0F0F0"><input id="cust_old_pwd" name="cust_old_pwd" type="password"  class=" modify_pwd" /></td>
+                    <td bgcolor="#F0F0F0" >
+                        <font id="msg_old" color="green" align="left"></font>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" bgcolor="#F0F0F0">请输入您的新密码：</td>
+                    <td bgcolor="#F0F0F0"><input id="cust_new_pwd" name="cust_new_pwd" type="password"  class=" modify_pwd" onblur="checkNewPassword()"/></td>
+                    <td bgcolor="#F0F0F0" >
+                        <font id="msg_new" color="green" align="left">密码请设为6-20位字母或数字</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" bgcolor="#F0F0F0">请再次输入设定密码：</td>
+                    <td bgcolor="#F0F0F0"><input id="cust_pwd" name="cust_pwd" type="password"  class="modify_pwd" onblur="checkRePassword()"/></td>
+                    <td bgcolor="#F0F0F0"><font id="msg" color="red" align="left"></font></td>
+                </tr>
+            </table>
+            <p><input type="submit" value="确认" class="modify_input"/> <input name="" type="button" value="取消" class="modify_input" onclick="history.go(-1)"/></p>
+        </form>
+
+
+    </div>
+</div>
+
+<div class="footer skubottom">
+    <div class="server wrap fn-clear">
+        <dl>
+            <dt class="you"></dt>
+            <dd class="t">正品保障</dd>
+            <dd>100%正品</dd>
+        </dl>
+        <div class="line"></div>
+        <dl>
+            <dt class="xin"></dt>
+            <dd class="t">无忧购物</dd>
+            <dd>7天无理由退货</dd>
+        </dl>
+        <div class="line"></div>
+        <dl>
+            <dt class="hui"></dt>
+            <dd class="t">零单批发</dd>
+            <dd>无采购限制</dd>
+        </dl>
+        <div class="line"></div>
+        <dl>
+            <dt class="bian"></dt>
+            <dd class="t">在线支付</dd>
+            <dd>银联支付宝</dd>
+        </dl>
+    </div>
+    <div class="bot_box">
+        <ul>
+            <li>
+                <p>关于我们</p>
+                <a href="about_01.jsp" class="company">公司简介</a>
+                <a href="contact.jsp" class="contact">联系我们</a>
+            </li>
+            <li>
+                <p>购物指南</p>
+                <a href="buy.jsp" class="buyProcess">购物流程</a>
+            </li>
+            <li>
+                <p>配送方式</p>
+                <a href="kuaidi.jsp" class="hzkd">合作快递</a>
+                <a href="question.jsp" class="pscjwt">配送常见问题</a>
+            </li>
+            <li>
+                <p>支付方式</p>
+                <a href="fahuo.jsp" class="kdfh">在线支付</a>
+                <a href="pay.jsp" class="hdfk">按合同发货</a>
+                <a href="fapiao.jsp" class="syfp">索要发票</a>
+            </li>
+            <li>
+                <p>售后服务</p>
+                <a href="contact.jsp" class="thhlc">联系我们</a>
+            </li>
+            <li>
+                <p>用户说明</p>
+                <a href="member_01.jsp" class="qyzc">企业注册</a>
+            </li>
+            <li>
+                <p>帮助</p>
+                <a href="help.jsp" class="kfzx">客服中心</a>
+                <a href="statement.jsp" class="mzsm">免责申明</a>
+                <a href="advice.jsp" class="tsyjy">投诉与建议</a>
+            </li>
+        </ul>
+        <div class="img">
+            <p>进入微信商城</p>
+            <img  src="images/code.png">
+        </div>
+    </div>
+    <div class="info">
+        找眼镜网 @2013-2018 南京起舵电子商务有限公司版权所有 苏ICP备 16001801号
+    </div>
+</div>
+
+
+
+
+</body>
+</html>

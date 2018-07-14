@@ -1,0 +1,1 @@
+<?phpclass VV{	public static function pic($id)	{		$data = M('pic')->field('img1,title')->where(['ti'=>$id])->order('id desc')->select();		return $data;	}}

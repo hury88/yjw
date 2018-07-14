@@ -1,0 +1,356 @@
+﻿/* 闂堛垹瀵樼仦锟�/
+.bread {
+  line-height: 45px;
+  font-size: 14px;
+}
+/* 閸愬懎顔愰柈銊ュ瀻 */
+.content .left {
+    width: 175px;
+}
+.content .left ul {
+    margin-top: 20px;
+}
+.content .left ul li {
+    line-height: 28px;
+    font-size: 14px;
+}
+.content .left ul li.name {
+    font-size: 15px;
+    font-weight: bold;
+}
+.content .left ul li span {
+    display: block;
+    padding-left: 10px;
+    font-size: 16px;
+    color: #0093ff;
+}
+.content .right {
+    width: 1025px;
+}
+.content .right .price_head {
+    width: 100%;
+    height: 80px;
+    border-bottom: 2px solid #333;
+}
+.content .right .price_head .detail_logo {
+    height: 22px;
+    line-height: 22px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.content .right .price_head .detail_logo i {
+    display: inline-block;
+    vertical-align: middle;
+    width: 28px;
+    height: 28px;
+    background: url("../../skuimage/comparePrice.png") 0 -103px;
+    margin: -3px 10px 0;
+}
+.content .right .price_head .flow {
+    width: 395px;
+    height: 55px;
+    background: url("../../skuimage/flow.png") no-repeat;
+}
+.content .right .price_head .flow.two {
+    background-position: 0 -112px;
+}
+.content .right .price_head .flow.three {
+    background-position: 0 -243px;
+}
+.content .right .person {
+    margin-top: 20px;
+}
+.content .right .person .more a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    color: #666;
+    margin-left: 45px;
+}
+.content .right .person .more a i {
+    display: inline-block;
+    vertical-align: middle;
+    width: 12px;
+    height: 7px;
+    background: url("../../skuimage/comparePrice.png") -21px -74px;
+    margin-left: 5px;
+}
+.content .right .person .more a.on i {
+    background-position: -4px -74px;
+}
+.content .right h3 {
+    font-size: 16px;
+    line-height: 60px;
+}
+.content .right h3 span {
+    float: left;
+}
+.content .right h3 a {
+    font-size: 14px;
+    color: #0093ff;
+}
+.content .right h3 a.add {
+    float: right;
+}
+.content .right .info .list {
+    line-height: 50px;
+    border-bottom:1px dashed #ccc;
+}
+.content .right .info .list .infod {
+    cursor: pointer;
+}
+.content .right .info .list .infod span {
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 14px;
+    margin: 10px 8px 0 25px;
+    width: 180px;
+    background: none;
+    border: 1px solid #fff;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.content .right .info .list .infod span.active {
+    border: 1px solid #0093ff;
+    background: url("../../skuimage/gou.jpg") right bottom no-repeat;
+}
+.content .right .info .list .infod em {
+    float: left;
+    margin: 0 5px;
+    font-size: 14px;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.content .right .info .list .infod i {
+    float: left;
+    width: 77px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    background: #a9a9a9;
+    margin: 15px 0 0 20px;
+}
+.content .right .info .list .operate a {
+    float: left;
+    margin-right: 20px;
+    color: #0093ff;
+    font-size: 14px;
+    display: none;
+}
+.content .right .info .list:hover span {
+    border: 1px solid #0093ff;
+}
+.content .right .info .list:hover a {
+    display: block;
+}
+.content .right .con {
+    width: 100%;
+}
+.content .right .con p.way {
+    line-height: 40px;
+    font-size: 14px;
+    margin-left: 50px;
+}
+.content .right .con .info {
+    height: 25px;
+    line-height: 25px;
+    margin-left:45px;
+}
+.content .right .con .info span {
+    display: inline-block;
+    vertical-align: middle;
+    height: 23px;
+    padding: 0 5px;
+    margin-right: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.content .right .con .info span.active {
+    border: 1px solid #0093ff;
+    background: url("../../skuimage/gou.jpg") right bottom no-repeat;
+}
+.content .right .con .info i {
+    margin: 0 6px 0 8px;
+}
+.content .right .con .info em {
+    margin: 0 5px;
+    font-size: 14px;
+}
+.content .right .con .info em.tel {
+    margin-left: 20px;
+}
+.content .right .con .info em.day {
+    margin: 0 10px 0 10px;
+}
+.content .right .con table {
+    float: right;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+.content .right .con table thead tr {
+    height: 32px;
+    background: #eee;
+}
+.content .right .con table tbody tr {
+    height: 64px;
+}
+.content .right .con table tbody tr img {
+    width: 125px;
+    height: 64px;
+    display: block;
+}
+.content .right .con table tbody tr span {
+    color: #0093ff;
+}
+.content .right .remark {
+    line-height: 28px;
+    margin-left: 50px;
+    font-size: 14px;
+}
+.content .right .remark input {
+    width: 500px;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+.content .right .total {
+    width: 100%;
+}
+.content .right .total .hj em {
+    line-height: 30px;
+    float: right;
+    margin-left: 30px;
+    font-size: 14px;
+}
+.content .right .total .hj em i {
+    color: #0093ff;
+    font-weight: bold;
+    margin-left: 30px;
+}
+.content .right .total p {
+    width: 100%;
+}
+.content .right .total p span {
+    float: right;
+    margin-left: 10px;
+    color: #999;
+}
+.content .right .btn {
+    margin-top: 15px;
+}
+.content .right .btn a {
+    float: right;
+    padding: 0 40px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 16px;
+    background: #e3e3e3;
+    margin-left: 35px;
+    cursor:pointer;
+}
+.content .right .btn a.htpay,.content .right .btn a.totalpay,.content .right .btn a.cancel{
+    background:#0093ff;
+    color:#fff;
+}
+.content .right .btn a.ht {
+    color: #fff;
+    background: #0093ff;
+}
+
+.grey {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr="#40000000", endColorstr="#40000000");
+    z-index: 1000;
+}
+.popup {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 1100px;
+    height: 480px;
+    margin-left: -550px;
+    margin-top: -240px;
+    background: #fff;
+    box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.3);
+    z-index: 10001;
+}
+.popup .con {
+    width: 1000px;
+    height: 400px;
+    margin: 40px auto;
+    position: relative;
+}
+.popup .con i {
+    position: absolute;
+    right: -30px;
+    top: -20px;
+    width: 24px;
+    height: 24px;
+    background: url("../../skuimage/close.png");
+    cursor: pointer;
+}
+.popup .con .top {
+    width: 10%;
+    height: 360px;
+}
+.popup .con .bot a {
+    float: right;
+    width: 84px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #bdbdbd;
+    font-size: 16px;
+}
+.popup .con .bot a.confirm {
+    background: #0093ff;
+    color: #fff;
+    margin-right: 25px;
+}
+
+
+/* 鍦板潃淇敼浣跨敤 */
+.validate{ width: 1000px; height: 100%; }
+.validate table{ width: 100%; }
+.validate tr{ height: 42px; }
+.validate tr td{ background: #fff }
+.validate tr td.pname{ padding-right: 20px; }
+.validate tr input{ height: 28px; width: 580px; line-height: 28px; border:1px solid #ccc; padding-left: 10px;}
+.validate select{ height: 28px; line-height: 28px; line-height: 28px; padding: 0 10px; margin-right: 10px; border:1px solid #ccc;}
+.validate .phone input,.validate .email input{ width: 318px; }
+.validate .telcon input{width: 125px;}
+.validate .tel em{ margin-right: 2px; text-align: left}
+.validate .setaddr input{float: left; margin:0; width: 16px; padding: 0; margin-top:1px; }
+.validate .setaddr span{ float: left; line-height: 28px; margin-right: 5px; }
+.popup .title{ font-size: 16px; line-height: 50px; margin: 0; }
+.g_tc input{ float:right; margin-left:20px;  height:30px; line-height:30px;  width: 95px; text-align: center;}
+.g_tc .modify_submit,.g_tc .modify_cancel
+{
+    width:95px; border:none; font-size:16px; cursor: pointer;
+}
+.g_tc .modify_submit{ background:#0093ff; color:#fff}
+.orderColor
+{
+    background:#0093ff;
+    color:#fff;
+}
+.addOrderAdd
+{
+    font-size:14px;
+}

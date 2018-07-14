@@ -1,0 +1,359 @@
+﻿<html>
+<head>
+<meta charset="UTF-8">
+
+    <meta name="Keywords" content="眼镜,太阳镜,眼镜贴牌代工,隐形眼镜,眼镜批发,光学镜片,眼镜店,找眼镜网,找眼镜" />
+    <meta name="Description" content="找眼镜网是眼镜行业首家综合类的集生产,批发的B2B代购代销电子商务平台。找眼镜网致力于成为眼镜行业零售，批发，生产的综合服务商" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>找眼镜网</title>
+
+<!--<link rel="icon" type="image/x-icon" href="../images/icon17.png">-->
+<link rel="stylesheet" href="css/base.css">
+<link href="css/home_top.css" type="text/css" rel="stylesheet">
+<link href="css/menu.css" type="text/css" rel="stylesheet">
+<link href="css/activell.css" type="text/css" rel="stylesheet">
+<link href="images/favicon1.ico" rel="icon" type="image/x-icon" />
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="head">
+        <!-- 顶部 -->
+        <div class="head_box">
+            <div class="wrap">
+                <div class="fn-left left">
+                    <span class="fn-left welcome">您好 找眼镜网欢迎您！</span>
+                    <div class="person fn-left fn-hide haslogin">
+                        <span class="icon"></span>
+                        <span class="phone">17871837418</span><a class="loginOut" href="">退出</a>
+                    </div>
+                    <div class="person fn-left haslogout">                        
+                        <a class="btn homeRegBt mendianReg">门店注册</a>
+                       <!-- <a class="btn homeRegBt supplierReg">供应商注册</a>-->
+                        <a href="forget.html" class="btn homeRegBt">找回密码</a>
+                    </div>
+                </div>
+                <div class="fn-right right">
+                    <a href="" class="cartBt"><i class="cart"></i><span>购物车</span></a>
+                    <a href="" class="muOrderBt"><i class="order"></i><span>订单</span></a>
+                    <a href="" class="person center"><i class="personIcon"></i><span>个人中心</span></a>
+                </div>
+            </div>
+        </div>
+        <!-- logo部分 -->
+        <div class="head_logo">
+            <div class="wrap fn-clear">
+                <div class="fn-left logo">
+                    <a href="#">
+                        <img src="picture/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="loginBox fn-left">
+                    <div class="topBlock">
+                        <a class="login" href="javascript:;">门店登录</a>
+                        <!--<a class="loginSupplier">供应商入驻</a>-->
+                    </div>
+                    <div class="bottomBlock">
+                        <p><i class="tel"></i>18013382890（客服电话和微信号）</p>
+                    	<p><i class="tel"></i>18013380871（客服电话和微信号）</p>
+                    </div>
+                </div>
+                <div class="search_box fn-left">
+                    <div class="search fn-clear">
+                        <input class="fn-left search_text" type="text" value="请输入商品关键词搜索或商品编号搜索" 
+                        onFocus="if(value=='请输入商品关键词搜索或商品编号搜索'){value=''}" onBlur="if(value==''){value ='请输入商品关键词搜索或商品编号搜索'}">
+                        <input type="button" class="fn-left btn">
+                    </div>
+                </div>
+                <div class="fn-right erweima">
+                    <img src="picture/smallac.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- 导航部分 -->
+        <div class="nav">
+            <div class="wrap">
+                <div class="all_goods active" href="#">全部商品
+                    <ul class="bannerLeftUl" style="height: 490px;">
+                        <li data-value="0">
+                            <a href="#">
+                                <i class="icon01"></i>
+                                <span>镜片</span>
+                            </a>
+                        </li>
+                        <li data-value="4">
+                            <a href="#">
+                                <i class="icon02"></i>
+                                <span>镜架</span>
+                            </a>
+                        </li>
+                        <li data-value="7">
+                            <a href="#">
+                                <i class="icon03"></i>
+                                <span>太阳镜</span>
+                            </a>
+                        </li>
+                        <li data-value="6">
+                            <a href="#">
+                                <i class="icon04"></i>
+                                <span>功能眼镜</span>
+                            </a>
+                        </li>
+                        <li data-value="2">
+                            <a href="#">
+                                <i class="icon05"></i>
+                                <span>其他</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="nav_btn" href="business.html">找商家</a>
+                <a class="nav_btn" href="index.html">首页</a>
+                <a class="nav_btn" href="message.html">资讯</a>
+                
+            </div>
+        </div>
+    </div>  
+    <!-- 门店登录 -->
+    <div class="login_box loginPop" style="display: none">
+        <div class="login"> <img class="close" src="picture/close.png">
+            <h2>账户登录</h2>
+            <ul>
+                <li>
+                    <input type="text" class="ipt" placeholder="登录名" value="" name="phone" id="account" autocomplete="off">
+                </li>
+                <li>
+                    <input type="password" class="ipt" placeholder="密码" value="" name="phone" id="pwd" autocomplete="off">
+                </li>
+                <li>
+                    <button class="btn loginBt">立即登录</button>
+                </li>
+            </ul>
+            <p class="null" style="display: none;">*用户名或者密码不能为空</p>
+            <div class="go_register"> <a class="registerBt">免费注册</a>
+                <div class="clr"></div>
+            </div>
+        </div>
+    </div>
+    <div class="banner_box slideBox"  id="slideBox">
+        <div class="hd">
+                <ul></ul>
+            </div>
+            <div class="bd">
+                <ul>
+                </ul>
+            </div>
+    </div>
+
+    <!--横排菜单结束-->
+
+    <!--广告开始-->
+    
+    <div class="banner1 fn-clear" >
+ <!-- 充值开始 -->
+        <div class="chongzhi fn-left" >
+          <a href="http://www.zyanjing.com/indexAdd.html" target="_blank">  <img src="picture/notify.jpg"></a>
+        </div>
+        <!-- END充值开始 -->
+
+     <!-- 滚动开始 -->
+        <Div class="dongtai fn-left" >
+            <div class="information_title">
+                 <img src="picture/info.png"><a href="message.html" target="_blank">更多&gt;&gt;</a>
+                  <div class="clear"></div>
+              </div>
+              <div class="information">
+                 <ul><li><img src="picture/info_icon.png"><a href="mesdetail.html?5650BADAF54D41798B4C7300AC9CAA4F&amp;message" target="_blank">近视眼镜应该怎样保护</a><div class="clear"></div></li><li><img src="picture/info_icon.png"><a href="mesdetail.html?9E1E5A69C7F2460CB2D0759435319D82&amp;message" target="_blank">意大利眼镜去年对华出口增幅达42％</a><div class="clear"></div></li><li><img src="picture/info_icon.png"><a href="mesdetail.html?9026D34C598A4F1388AC14210EF8FEAD&amp;message" target="_blank">眼镜片为何会发黄</a><div class="clear"></div></li><li><img src="picture/info_icon.png"><a href="mesdetail.html?A16A614070184B44A19B927715C395E8&amp;message" target="_blank">镜片企业该如何做好差异化产品</a><div class="clear"></div></li></ul>
+              </div>
+        </Div>
+        <!-- END滚动开始 -->
+   
+     
+             <Div class="dongtai fn-left dongtai2">
+                <h1>市场动态</h1>
+                <div id="marquee">
+                    <ul></ul>
+                </div>
+            </Div>
+        
+       
+        <div class="pdsudiv" >
+        	<!--<a href="indexAdd.html">
+        		<img style="width: 1200px" src="picture/pdsu.jpg" alt="">
+        	</a>-->
+        
+        </div>
+        
+ <span><b>优惠商品   </b>镜片/镜架</span>
+        <hr class="yhsphr" style="width: 1200px;margin: auto;margin-bottom: 10px;margin-top: 5px"/>
+ </div>
+            <!--优惠商品头部-->
+      
+
+        <!--商品部分-->
+        <div class="commodity fn-clear">
+            <div class="commodity_left">
+                <a href="eyeglass.html?0"><img src=""></a>
+            </div>
+            <div class="commodity_mid"></div>
+            <div class="commodity_right"></div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+
+        <!--商品部分-->
+        <div  class="commodity fn-clear" class="commodity"  >
+            <div class="commodity_left">
+                <a href="eyeglass.html?4"><img src=""></a>
+            </div>
+            <div class="commodity_mid"></div>
+            <div class="commodity_right"></div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+
+<!--  <hr class="hrhr" style="width: 1200px;margin: auto" /> -->
+        <!-- <div class="hrdiv" style="">
+                   <div style="width: 300px;height: 184px;border:1px solid #ccc;float:left;background-image: url(images/newtu1.png);"></div>
+                   <div style="width: 300px;height: 184px;border-top:1px solid #ccc;border-bottom:1px solid #ccc;border-right:1px solid #ccc;float:left;background-image: url(images/newtu2.png);"></div>
+                   <div style="width: 300px;height: 184px;border-top:1px solid #ccc;border-bottom:1px solid #ccc;border-right:1px solid #ccc;float:left;background-image: url(images/newtu3.png);"></div>
+                   <div style="width: 300px;height: 184px;border-top:1px solid #ccc;border-bottom:1px solid #ccc;border-right:1px solid #ccc;float:left;background-image: url(images/newtu4.png);"></div>
+           
+        
+        
+               </div> -->
+       <!-- 底部 -->
+       <div style="width: 1200px; margin:20px auto" class="fn-clear">
+           <span ><b>品牌合作</b></span>
+
+        
+        <hr class="pphzhr" style="width: 1200px;margin: auto;margin-top: 5px" />
+
+<div class="ysldiv" style="">
+    <a href="http://www.zyanjing.com/jpSelect.html?1=依视路" target="_blank"><div style="width: 200px;height: 100px;border-bottom:1px solid #ccc;border-right:1px solid #ccc;float:left;background-image: url(images/newysl.png);"></div></a>
+    <a href="http://www.zyanjing.com/jjSelect.html?154%4" target="_blank"><div style="width: 200px;height: 100px;border-bottom:1px solid #ccc;border-right:1px solid #ccc;float:left;background-image: url(images/amn.jpg);"></div></a>
+    <a href="http://www.zyanjing.com/jpSelect.html?25=慧尔视" target="_blank"><div style="width: 200px;height: 100px;border-bottom:1px solid #ccc;border-right:1px solid #ccc;float:left;background-image: url(images/newhes.png);"></div></a>
+    <a href="http://www.zyanjing.com/jjSelect.html?166%4" target="_blank"><div style="width: 200px;height: 100px;border-bottom:1px solid #ccc;border-right:1px solid #ccc;float:left;background-image: url(images/baoshijie@2x.png);"></div></a>
+    <a href="http://www.zyanjing.com/jpSelect.html?19=蔡司" target="_blank"><div style="width: 200px;height: 100px;border-bottom:1px solid #ccc;border-right:1px solid #ccc;float:left;background-image: url(images/newcs.png);"></div></a>
+    <a href="http://www.zyanjing.com/jjSelect.html?158%4" target="_blank"><div style="width: 200px;height: 100px;border-bottom:1px solid #ccc;float:left;background-image: url(images/newaomk.png);"></div></a>
+    <a href="http://www.zyanjing.com/jjSelect.html?54%4" target="_blank"><div style="width: 200px;height: 100px;border-right:1px solid #ccc;float:left;background-image: url(images/newlp.png);"></div></a>
+    <a href="http://www.zyanjing.com/jpSelect.html?165=广豪丽视多" target="_blank"><div style="width: 200px;height: 100px;border-right:1px solid #ccc;float:left;background-image: url(images/newgh.png);"></div></a>
+    <a href="http://www.zyanjing.com/jpSelect.html?2=碧碧及亚" target="_blank"><div style="width: 200px;height: 100px;border-right:1px solid #ccc;float:left;background-image: url(images/newbbjy.png);"></div></a>
+    <a href="http://www.zyanjing.com/jjSelect.html?120%4" target="_blank"><div style="width: 200px;height: 100px;border-right:1px solid #ccc;float:left;background-image: url(images/newjg.png);"></div></a>
+    <a href="http://www.zyanjing.com/jpSelect.html?93=百维视" target="_blank"><div style="width: 200px;height: 100px;border-right:1px solid #ccc;float:left;background-image: url(images/newbes.png);"></div></a>
+    <a href="http://www.zyanjing.com/jjSelect.html?191%4" target="_blank"><div style="width: 200px;height: 100px;border-right:0px solid #ccc;float:left;background-image: url(images/newlws.png)"></div></a>
+</div>
+
+       </div>
+    <div class="footer">
+        <div class="server wrap fn-clear">
+            <dl>
+                <dt class="you"></dt>
+                <dd class="t">正品保障</dd>
+                <dd>100%正品</dd>
+            </dl>
+            <div class="line"></div>
+            <dl>
+                <dt class="xin"></dt>
+                <dd class="t">无忧购物</dd>
+                <dd>7天无理由退货</dd>
+            </dl>
+            <div class="line"></div>
+            <dl>
+                <dt class="hui"></dt>
+                <dd class="t">零单批发</dd>
+                <dd>无采购限制</dd>
+            </dl>
+            <div class="line"></div>
+            <dl>
+                <dt class="bian"></dt>
+                <dd class="t">在线支付</dd>
+                <dd>银联支付宝</dd>
+            </dl>
+        </div>
+        <div class="bot_box">
+            <ul>
+                <li>
+                    <p>关于我们</p>
+                    <a data-href="about_01.jsp" class="company">公司简介</a>
+                    <a data-href="contact.jsp" class="contact">联系我们</a>
+                </li>
+                <li>
+                    <p>购物指南</p>
+                    <a data-href="buy.jsp" class="buyProcess">购物流程</a>
+                </li>
+                <li>
+                    <p>配送方式</p>
+                    <a data-href="kuaidi.jsp" class="hzkd">合作快递</a>
+                    <a data-href="question.jsp" class="pscjwt">配送常见问题</a>
+                </li>
+                <li>
+                    <p>支付方式</p>
+                    <a data-href="fahuo.jsp" class="kdfh">在线支付</a>
+                    <a data-href="pay.jsp" class="hdfk">按合同发货</a>
+                    <a data-href="fapiao.jsp" class="syfp">索要发票</a>
+                </li>
+                <li>
+                    <p>售后服务</p>
+                    <a data-href="contact.jsp" class="thhlc">联系我们</a>
+                </li>
+                <li>
+                    <p>用户说明</p>
+                    <a data-href="member_01.jsp" class="qyzc">企业注册</a>
+                </li>
+                <li>
+                    <p>帮助</p>
+                    <a data-href="help.jsp" class="kfzx">客服中心</a>
+                    <a data-href="statement.jsp" class="mzsm">免责申明</a>
+                    <a data-href="advice.jsp" class="tsyjy">投诉与建议</a>
+                </li>
+            </ul>
+            <div class="img">
+                <p>进入微信商城</p>
+                <img  src="picture/code.png">
+            </div>
+        </div>
+        <div class="info">
+            找眼镜网 @2013-2018 南京起舵电子商务有限公司版权所有 苏ICP备 16001801号
+        </div>
+    </div>
+    <!-- 右侧导航 -->
+    <div class="sideNav">
+        <a href="javascript:;" class="muOrderBt"><p>我的订单</p><i></i></a>
+        <a href="javascript:;" class="cartBt"><p>购物车</p><i class="gwc"></i></a>
+        <!-- <a href="#"><p>我的足迹</p><i class="zj"></i></a> -->
+        <!--<a href="#"><p>充值</p><i class="cz"></i></a>-->
+        <a href="#"><p class="code"><img src="picture/smallac.png" alt=""></p><i class="ewm"></i></a>
+        <style>
+            .sideNav a p.code{ height:93px; background: none}
+            .sideNav a p.code img{width:100%;}
+        </style>
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=2987105596&site=qq&menu=yes" target="_blank"><img style="display:none" border="0" src="picture/091965d8616740e9921d06c6c8ba0248.gif" alt="点击这里给我发消息" title="点击这里给我发消息"/><p>客服</p><i class="qqkf"></i></a>
+
+        <a href="javascript:;"><p>回到顶部</p><i class="toTop"></i></a>
+    </div>
+
+    <!--<div class="loginPop">-->
+        <!--<div class="loginCont">-->
+            <!--<h1>登录</h1>-->
+            <!--<input placeholder="请输入用户名" id="account"/>-->
+            <!--<input placeholder="请输入密码" id="pwd"/>-->
+            <!--<a class="loginBt">登录</a>-->
+        <!--</div>-->
+    <!--</div>-->
+       
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/jquery.superslide.2.1.1.js"></script>
+    <script type="text/javascript" src="js/marquee.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
+        <script type="text/javascript">
+         
+        </script>
+    <script>
+        var proDetailV = false;
+    </script>
+    <script src='js/homeajax.js'></script>
+    <script src="js/allsearch.js"></script> 
+</body>
+</html>

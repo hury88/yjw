@@ -1,0 +1,322 @@
+﻿/* 面包屑 */
+.bread {
+  line-height: 45px;
+  font-size: 14px;
+}
+/* 内容部分 */
+.content .left {
+  width: 218px;
+  border: 1px solid #ccc;
+  position: relative;
+  height: 614px;
+  overflow: hidden;
+}
+.content .left .box {
+  height: 650px;
+}
+.content .left .box .list {
+  margin-bottom: 5px;
+}
+.content .left .box .list p {
+  width: 100%;
+  height: 34px;
+  line-height: 34px;
+  border: 1px solid #ccc;
+  border-width: 1px 0 1px 0;
+  cursor: pointer;
+}
+.content .left .box .list p i {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  margin: 0 10px 0 12px;
+  background: url("../images/jpselect.png");
+}
+.content .left .box .list p a.active{
+   color: #0093ff; font-weight: bold;
+}
+.content .left .box .list p i.add {
+  background-position: 0 -19px;
+}
+.content .left .box .list ul {
+  padding-left: 35px;
+}
+.content .left .box .list ul li {
+  line-height: 34px;
+  cursor: pointer;
+}
+.content .left .box .list ul li:hover{ color: #0093ff}
+.content .left .box .list ul li.on{
+  color: #0093ff;
+}
+.content .right {
+  width: 960px;
+}
+.content .right .title {
+  width: 958px;
+  border: 1px solid #ccc;
+}
+
+.content .right .title img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.content .right .ppCon{
+  margin-top:5px;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.content .right .ppCon span {
+  color: #000;
+  font-size: 16px;
+  margin:0 10px;
+  font-weight: lighter;
+}
+.content .right .select1 {
+  width: 100%;
+}
+.content .right .select1 .list1 {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  overflow: hidden;
+}
+.content .right .select1 .list1 span {
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 25px;
+}
+.content .right .select1 .list1 .options1 {
+  margin-left: 135px;
+  width: 80%;
+  overflow: hidden;
+}
+.content .right .select1 .list1 .options1 a {
+  margin: 0 15px;
+  font-size: 14px;
+  display: inline-block;
+}
+.content .right .select1 .list1 .options1 a:hover{ color: #0093ff}
+.content .right .select1 .list1 .options1 a.active {
+  color: #0093ff;
+}
+.content .right .select1 .list1 .options1 b{
+  margin: 0 15px;
+}
+.content .right .select1 .list1 i {
+  position: absolute;
+  right: 10px;
+  top: 13px;
+  width: 22px;
+  height: 22px;
+  background: url("../images/jjselect.png") 4px -137px no-repeat;
+  cursor: pointer;
+}
+.content .right .select1 .list1.all {
+  height: auto;
+}
+.content .right .select1 .list1.all .line {
+  border: 2px solid #ccc;
+}
+.content .right .select1 .list1.all .line i {
+  background-position: 4px -184px;
+}
+
+
+.content .right .select {
+  width: 100%;
+}
+.content .right .select .list {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  overflow: hidden;
+}
+.content .right .select .list span {
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 25px;
+}
+.content .right .select .list .options {
+  margin-left: 135px;
+  width: 80%;
+  overflow: hidden;
+}
+.content .right .select .list .options a {
+  margin: 0 15px;
+  font-size: 14px;
+  display: inline-block;
+}
+.content .right .select .list .options a:hover{ color: #0093ff}
+.content .right .select .list .options a.on {
+  color: #0093ff;
+}
+.content .right .select .list .options b{
+  margin: 0 15px;
+}
+.content .right .select .list i {
+  position: absolute;
+  right: 10px;
+  top: 13px;
+  width: 22px;
+  height: 22px;
+  background: url("../images/jjselect.png") 4px -137px no-repeat;
+  cursor: pointer;
+}
+.content .right .select .list.all {
+  height: auto;
+}
+.content .right .select .list.all .line {
+  border: 2px solid #ccc;
+}
+.content .right .select .list.all .line i {
+  background-position: 4px -184px;
+}
+.content .right .cond {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  background: #eee;
+  border-bottom: 1px solid #999;
+}
+.content .right .cond span.cond_title {
+  margin-left: 25px;
+}
+.content .right .cond .con {
+  margin-left: 35px;
+}
+.content .right .cond .con span {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 35px 0 15px;
+  color: #fff;
+  font-size: 14px;
+  background: #999;
+  height: 25px;
+  line-height: 25px;
+  position: relative;
+  margin-right: 10px;
+}
+.content .right .cond .con span i {
+  position: absolute;
+  right: 15px;
+  top: 8px;
+  width: 6px;
+  height: 8px;
+  background: url("../images/jpselect.png") 0 -205px;
+  cursor: pointer;
+}
+.content .right .cond span.del {
+  margin-right: 22px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.content .right .jp_con {
+  width: 100%;
+}
+.content .right .jp_con .jp_list:hover span.kind a{ color: #0093ff}
+.content .right .jp_con p {
+  width: 958px;
+  height: 60px;
+  line-height: 60px;
+  border: 1px solid #999;
+  border-top: none;
+}
+.content .right .jp_con p i {
+  display: inline-block;
+  background: url("../images/jpselect.png");
+  margin-right: 5px;
+}
+.content .right .jp_con p span.kind {
+  width:835px;
+  float: left;
+}
+.content .right .jp_con p span.kind a {
+  margin-left: 20px;
+  font-size: 16px;
+  display: block;
+  width: 790px;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+
+}
+
+.content .right .jp_con p span.launch {
+  width: 120px;
+  display: inline-block;
+  cursor: pointer;
+}
+.content .right .jp_con p span.launch i {
+  width: 12px;
+  height: 7px;
+  background-position: 0 -248px;
+}
+.content .right .jp_con p span.launch i.on {
+  background-position: 0 -226px;
+}
+.content .right .jp_con p span.ask {
+  display: inline-block;
+  display: none;
+}
+.content .right .jp_con p span.ask i {
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 16px;
+  background-position: 0 -162px;
+  font-size: 16px;
+}
+.content .right .jp_con table {
+  border-color: #999;
+}
+.content .right .jp_con table tr {
+  height: 35px;
+  font-size: 14px;
+}
+.content .right .jp_con table tr td {
+  text-align: center;
+}
+.content .right .jp_con table thead {
+  background: #e3e3e3;
+}
+.content .right .jp_con table thead th {
+  text-align: center;
+}
+.content .right .jp_con table tbody span {
+  color: #0093ff;
+  font-size: 16px;
+}
+.content .right .jp_con table tbody i {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  background: url("../images/jpselect.png") 0 -89px;
+  width: 21px;
+  height: 16px;
+}
+.content .right .jp_con table tbody tr.hide a {
+  cursor: not-allowed;
+  color: #999999;
+}
+
+.content .right .but{
+  float: left; width: 100%;
+}
+.content .right .but a{
+  display:block; width: 130px; height: 40px; margin:40px auto; line-height: 40px; text-align: center; background: #0093ff; color: #fff;
+}
+
+
+.fahuofang{width:100%; padding: 10px 0 0; display: none}
+.fahuofang p{line-height: 20px; font-size: 12px; color: #999; width: 50%; float: left;}
+.fahuofang p.name{color: #666; line-height: 25px; font-size: 14px; width: 100%;}
+.fahuofang p.name span{font-weight: bold;}
