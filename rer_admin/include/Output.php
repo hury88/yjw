@@ -615,7 +615,7 @@ class Output{
 
 			global $$n;
 
-			$v = isset($$n) ? $$n : '';
+			$v = isset($$n) ? $$n : $v;
 
 		}
 
@@ -1026,15 +1026,22 @@ HTML;
 
 
 
-	public function radioSet($data){
+	public function radioSet($data, $kisv=false){
 
 		$data or $data=array();
 
 		foreach ($data as $key => $value) {
 
-			$this->radio($value,$key);
+		    if($kisv) {
 
-		}
+                $this->radio($value,$value);
+            } else {
+
+                $this->radio($value,$key);
+            }
+
+
+        }
 
 		return $this;
 

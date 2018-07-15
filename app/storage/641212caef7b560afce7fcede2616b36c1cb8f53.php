@@ -7,19 +7,23 @@
                 <span class="fn-left welcome">您好 找眼镜网欢迎您！</span>
                 <div class="person fn-left fn-hide haslogin">
                     <span class="icon"></span>
-                    <span class="phone">17871837418</span><a class="loginOut" href="">退出</a>
+                    <span class="phone"></span><a href="/user/logout" class="loginOut" href="">退出</a>
                 </div>
                 <div class="person fn-left haslogout">                        
                     <a class="btn homeRegBt mendianReg">门店注册</a>
                    <!-- <a class="btn homeRegBt supplierReg">供应商注册</a>-->
-                    <a href="forget.html" class="btn homeRegBt">找回密码</a>
+                    
                 </div>
             </div>
-            <div class="fn-right right">
-                <a href="" class="cartBt"><i class="cart"></i><span>购物车</span></a>
-                <a href="" class="muOrderBt"><i class="order"></i><span>订单</span></a>
-                <a href="" class="person center"><i class="personIcon"></i><span>个人中心</span></a>
-            </div>
+            <?php if($person->isLogin()): ?>
+                <div class="fn-right right">
+                    <a href="" class="cartBt"><i class="cart"></i><span>购物车</span></a>
+                    <a href="" class="muOrderBt"><i class="order"></i><span>订单</span></a>
+                    <a href="" class="person center"><i class="personIcon"></i><span>个人中心</span></a>
+                </div>
+            <?php else: ?>
+                <a class="login" href="javascript:;">门店登录</a>
+            <?php endif; ?>
         </div>
     </div>
     <!-- logo部分 -->
@@ -32,7 +36,12 @@
             </div>
             <div class="loginBox fn-left">
                 <div class="topBlock">
-                    <a class="login" href="javascript:;">门店登录</a>
+                    <?php if($person->isLogin()): ?>
+                        <a class="login" href="/user/index">门店中心</a>
+                    <?php else: ?>
+                        <a class="login" href="javascript:;">门店登录</a>
+
+                <?php endif; ?>
                     <!--<a class="loginSupplier">供应商入驻</a>-->
                 </div>
                 <div class="bottomBlock">
@@ -91,7 +100,6 @@
             <a class="nav_btn" href="business.html">找商家</a>
             <a class="nav_btn" href="index-1.html">首页</a>
             <a class="nav_btn" href="message.html">资讯</a>
-            
         </div>
     </div>
 </div>  
@@ -99,17 +107,19 @@
 <div class="login_box loginPop" style="display: none">
     <div class="login"> <img class="close" src="/style/images/close.png">
         <h2>账户登录</h2>
+        <form class="form" action="/user/login">
         <ul>
             <li>
-                <input type="text" class="ipt" placeholder="登录名" value="" name="phone" id="account" autocomplete="off">
+                <input type="text" class="ipt" placeholder="登录名" value="" name="username" id="account" autocomplete="off">
             </li>
             <li>
-                <input type="password" class="ipt" placeholder="密码" value="" name="phone" id="pwd" autocomplete="off">
+                <input type="password" class="ipt" placeholder="密码" value="" name="password" id="pwd" autocomplete="off">
             </li>
             <li>
                 <button class="btn loginBt">立即登录</button>
             </li>
         </ul>
+        </form>
         <p class="null" style="display: none;">*用户名或者密码不能为空</p>
         <div class="go_register"> <a class="registerBt">免费注册</a>
             <div class="clr"></div>

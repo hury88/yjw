@@ -32,8 +32,8 @@ $(function(){
 		// 加入购物车
     var prod_id = "",  //商品id
     	price = "",  //原价
-    	flag = "&flag=1",  
-    	sku_id = "",    
+    	flag = "&flag=1",
+    	sku_id = "",
     	discount = "",   //商品折扣
     	quantity = "";   //商品数量
 
@@ -53,7 +53,7 @@ $(function(){
     }
     img();
 
-    
+
 	$.ajax({  // 获取所有品牌
         type:"POST",
         url:domain+"/com_product!getAllProdBrand.shtml?prod_type="+allProArray[1],
@@ -85,7 +85,7 @@ $(function(){
 				        }
 				    })
         		}
-        	}    	
+        	}
 			$(".left .box .list[data-index='"+allProArray[0]+"']").find("i").removeClass("add");  //加号展开
           },
         error:function(){
@@ -113,10 +113,10 @@ $(function(){
                     order_by = "&order_by=0";
                     prod_series = "&prod_series="+data.data[0].theindex;
                     series()
-                    
+
                 }
-                
-                
+
+
               },
             error:function(){
                 console.log("链接失败");
@@ -154,7 +154,7 @@ $(function(){
 	    list.find("ul").show();
 		t.removeClass("add");
 		list.siblings(".list").find("ul").hide();
-		list.siblings(".list").find("i").addClass("add");	
+		list.siblings(".list").find("i").addClass("add");
 	})
 
 	var sa = 0;
@@ -177,7 +177,7 @@ $(function(){
         nose_width = "";
         shapeArg = "";
         styleArg = "";
-		// prodBrandVal = indexF+"%4";  
+		// prodBrandVal = indexF+"%4";
 		l = 1;
 	    series();
         xh(indexF);
@@ -204,10 +204,10 @@ $(function(){
                     order_by = "&order_by=0";
                     prod_series = "&prod_series="+data.data[0].theindex;
                     series()
-                    
+
                 }
-                
-                
+
+
               },
             error:function(){
                 console.log("链接失败");
@@ -226,16 +226,16 @@ $(function(){
                     for (var i=0;i<data.data.length;i++) {
                         jj_options.append('<a href="javascript:;" data-index="'+data.data[i].theindex+'">'+data.data[i].value+'</a>');
                         jj_options.eq(0).find("a").eq(n).addClass("active");
-                        jj_options.eq(0).find("a").eq(n).siblings("a").removeClass("active"); 
+                        jj_options.eq(0).find("a").eq(n).siblings("a").removeClass("active");
 
                         jj_options.eq(1).find("a").eq(n).addClass("active");
-                        jj_options.eq(1).find("a").eq(n).siblings("a").removeClass("active"); 
+                        jj_options.eq(1).find("a").eq(n).siblings("a").removeClass("active");
                     }
                     order_by = "&order_by=0";
                     prod_series = "&prod_series="+data.data[n].index;
                 }
-                
-	        	
+
+
 	          },
 	        error:function(){
 	            console.log("链接失败");
@@ -279,11 +279,11 @@ $(function(){
                         if(table.find("tbody tr").length == data.list.length){
                             table.find("tbody tr:eq(0) .btn").addClass("on").html("已选");
                             table.find("tbody tr:eq(0)").siblings("tr").removeClass("on");
-                            supplier_id = "&supplier_id="+data.list[0].supplier_id; 
+                            supplier_id = "&supplier_id="+data.list[0].supplier_id;
                         }
 		        	}
 
-		        	
+
 	        	}else{
                     $(".jj_info").hide();
                     supplier_id = "&supplier_id="+'';
@@ -291,7 +291,7 @@ $(function(){
                 getSearchUrl();
                     filter_con.empty();
                     proList();
-                     
+
 	          },
 	        error:function(){
 	            console.log("链接失败");
@@ -309,7 +309,7 @@ $(function(){
         order_by = "&order_by="+ind;
         filter_con.empty();
         getSearchUrl();
-        
+
         proList();
     })
 
@@ -321,10 +321,10 @@ $(function(){
     		if(filter_con.children().length>0){
 		    	loadN++;
 		        getSearchUrl();
-		        
+
 		        proList();
 		    }
-    	}	
+    	}
 	});
     xh(allProArray[0]);
     sh(allProArray[0]);
@@ -356,7 +356,7 @@ $(function(){
                 xinghao.find("a").click(function(){
                     loadN = 1;
                     filter_con.empty();
-                    
+
                     version = "&version="+$(this).html();
                     getSearchUrl();
                     proList();
@@ -367,7 +367,7 @@ $(function(){
             }
         });
     }
-    
+
     /**获取色号**/
     function sh(pp){
         $.ajax({
@@ -376,7 +376,7 @@ $(function(){
             dataType : 'json',
             contentType : "text/plain; charset=utf-8",
             success:function(data){
-              
+
                 sehao.empty();
                 if(data.data.length>0) {
                     for (var i = 0; i < data.data.length; i++) {
@@ -392,7 +392,7 @@ $(function(){
                 sehao.find("a").click(function(){
                     loadN = 1;
                     filter_con.empty();
-                    
+
                     prod_color = "&prod_color="+$(this).html();
                     getSearchUrl();
                     proList();
@@ -404,7 +404,7 @@ $(function(){
         });
 
     }
-    
+
     /**获取镜框尺寸**/
     function jkcc(pp){
         $.ajax({
@@ -413,7 +413,7 @@ $(function(){
             dataType : 'json',
             contentType : "text/plain; charset=utf-8",
             success:function(data){
-               
+
                 jkchicun.empty();
                 if(data.data.length>0) {
                     for (var i = 0; i < data.data.length; i++) {
@@ -429,7 +429,7 @@ $(function(){
                 jkchicun.find("a").click(function(){
                     loadN = 1;
                     filter_con.empty();
-                    
+
                     mirr_width = "&mirr_width="+$(this).html();
                     getSearchUrl();
                     proList();
@@ -440,7 +440,7 @@ $(function(){
             }
         });
     }
-    
+
 
     /**获取鼻梁尺寸**/
     function blcc(pp){
@@ -450,7 +450,7 @@ $(function(){
             dataType : 'json',
             contentType : "text/plain; charset=utf-8",
             success:function(data){
-                
+
                 blchicun.empty();
                 if(data.data.length>0) {
                     for (var i = 0; i < data.data.length; i++) {
@@ -466,7 +466,7 @@ $(function(){
                 blchicun.find("a").click(function(){
                     loadN = 1;
                     filter_con.empty();
-                    
+
                     nose_width = "&nose_width="+$(this).html();
                     getSearchUrl();
                     proList();
@@ -477,7 +477,7 @@ $(function(){
             }
         });
     }
-   
+
     /**获取框型**/
     function kx(pp){
         $.ajax({
@@ -486,7 +486,7 @@ $(function(){
             dataType : 'json',
             contentType : "text/plain; charset=utf-8",
             success:function(data){
-               
+
                 kuangxing.empty();
                 if(data.data.length>0) {
                     for (var i = 0; i < data.data.length; i++) {
@@ -502,7 +502,7 @@ $(function(){
                 kuangxing.find("a").click(function(){
                     loadN = 1;
                     filter_con.empty();
-                    
+
                     shapeArg = "&shape="+$(this).attr("data-value");
                     getSearchUrl();
                     proList();
@@ -513,7 +513,7 @@ $(function(){
             }
         });
     }
-    
+
 
     /**获取款式**/
     function ks(pp){
@@ -523,7 +523,7 @@ $(function(){
             dataType : 'json',
             contentType : "text/plain; charset=utf-8",
             success:function(data){
-              
+
                 if(data.data.length>0) {
                     kuanshi.empty();
                     for (var i = 0; i < data.data.length; i++) {
@@ -540,7 +540,7 @@ $(function(){
                 kuanshi.find("a").click(function(){
                     loadN = 1;
                     filter_con.empty();
-                    
+
                     styleArg = "&style="+$(this).attr("data-value");
                     getSearchUrl();
                     proList();
@@ -551,7 +551,7 @@ $(function(){
             }
         });
     }
-    
+
 
 
     // 筛选结果url
@@ -595,11 +595,11 @@ $(function(){
                          	{
 	                         	var price1 = data.data[i].market_price*data.data[i].discount/100;
 	                            var url = 'productDetail.html?prod_id='+data.data[i].prod_id+'&discount='+data.data[i].discount+'&sku_id='+data.data[i].sku_id+'&supplier_id='+supplier_id.substr(13);
-	                            var hide = '';
+                                var hide = '';
                          	}
 
                          }
-                    	li += '<li data-value='+data.data[i].prod_id+' data-discount="'+data.data[i].discount+'" data-price="'+price1+'" data-sku="'+data.data[i].sku_id+'"><div class="con"><a class="img" href="'+url+'" target="_blank"><img src="'+data.data[i].big_img_path+'" alt=""></a><span><a href="'+url+'"  >'+data.data[i].prod_name+'</a></span><p>批发价：<em>'+price1+'</em></p><div class="cart fn-clear"><div class="jj"><i class="minus"></i><input type="text" value="1" ><i class="plus"></i></div><a href="javascript:;"  class="add_cart '+hide+'"><i></i>加入购物车</a></div></div></li>'
+                    	li += '<li data-value='+data.data[i].prod_id+' data-discount="'+data.data[i].discount+'" data-price="'+price1+'" data-sku="'+data.data[i].sku_id+'"><div class="con"><a class="img" href="'+url+'" target="_blank"><img src="'+data.data[i].path+data.data[i].big_img_path+'" alt=""></a><span><a href="'+url+'"  >'+data.data[i].prod_name+'</a></span><p>批发价：<em>'+price1+'</em></p><div class="cart fn-clear"><div class="jj"><i class="minus"></i><input type="text" value="1" ><i class="plus"></i></div><a href="javascript:;"  class="add_cart '+hide+'"><i></i>加入购物车</a></div></div></li>'
                         filter_con.append(li);
                     }
 		         }else{
@@ -607,18 +607,18 @@ $(function(){
                         // alert($(".cond .con span").length)
                         if($(".cond .con span").length > 0){
                             but.html("没有筛选条件的商品");
-                           but.css("background","#ccc"); 
-                            
+                           but.css("background","#ccc");
+
                         }else{
                            but.html("显示更多");
                             but.css("background","#0093ff");
                         }
-                        
+
                     }else{
                         but.html("已经全部加载");
                         but.css("background","#ccc");
                     }
-                        
+
 	        	}
             },
             error:function(){
@@ -636,7 +636,7 @@ $(function(){
 			$(".options a").removeClass("on");
 			$(".jj_options a").eq(0).addClass("active").siblings().removeClass("active");
 	        loadN = 1;
-	        
+
 	        version = "";
 	        prod_color = "";
 	        mirr_width = "";
@@ -663,11 +663,11 @@ $(function(){
 		}
 		if($(".cond .con").find('span[data-type="'+id+'"]').length>0){
 			$(".cond .con").find('span[data-type="'+id+'"]').html('<em>'+val+'</em><i></i>');
-			
+
 		}else{
-			
-			$(".cond .con").append('<span data-type="'+id+'" data-value="'+value+'"><em>'+val+'</em><i></i></span>');	
-		}	
+
+			$(".cond .con").append('<span data-type="'+id+'" data-value="'+value+'"><em>'+val+'</em><i></i></span>');
+		}
 	})
 
 	$(document).on('click','.cond .con span i',function(){
@@ -734,9 +734,9 @@ $(function(){
         loadN = 1;
 		getSearchUrl();
         filter_con.empty();
-        
+
         proList();
-		
+
 	})
 
 
@@ -748,7 +748,7 @@ $(function(){
 		supplier_id = "&supplier_id="+t.closest("tr").attr("data-id");
 		getSearchUrl();
         filter_con.empty();
-        
+
         proList();
 	})
 
@@ -785,10 +785,10 @@ $(function(){
 	        discount = "&discount="+li.attr("data-discount");
 	        quantity = "&quantity="+li.find("input").val();
             sku_id = "&sku_id="+li.attr("data-sku")
-	     
+
         var img = li.find('img').attr('src');//获取当前点击图片链接
         var flyer = $('<img class="flyer-img" src="' + img + '">');//抛物体对象
-        
+
         //检查是否已经登录
         checkHasLogin();
         function checkHasLogin(){
@@ -802,15 +802,15 @@ $(function(){
                     withCredentials: true
                 },
                 success: function (data) {
-                    
+
                     custName = data.XYanJ_C_Nam;
                     if(custName){
                         custId = data.XYanJ_C_id;
                         custType = data.custType;
                         custGrade = data.custGrade;
-                        
+
                     }
-               
+
                     if(custId==""||custId=="null"||custId==null){
                         loginPop.fadeIn();
                     }else {
@@ -854,17 +854,17 @@ $(function(){
                                 })
                             }
                         }
-                    }                           
+                    }
                 },
             });
-        }               
+        }
 	})
 
 	//镜架种类下拉框
 	$(".select .list i").click(function(){
 		var t = $(this), list = t.closest(".list");
 		list.toggleClass("all");
-		
+
 	})
 
 
@@ -891,7 +891,7 @@ $(function(){
     };
 
     // 右侧选择
-     $(document).ajaxSuccess(function(){  
+     $(document).ajaxSuccess(function(){
      	$(".content .right .select .list i").eq(4).hide();
      	$(".content .right .select .list i").eq(5).hide();
         /*if($(".options").height()>0){
@@ -902,7 +902,7 @@ $(function(){
                 }
            })
         }*/
-    }); 
+    });
     //检查是否已经登录
     checkHasLogin();
     function checkHasLogin(){
@@ -915,17 +915,17 @@ $(function(){
                 withCredentials: true
             },
             success: function (data) {
-                
+
                 custName = data.XYanJ_C_Nam;
                 if(custName){
                     custId = data.XYanJ_C_id;
                     custType = data.custType;
                     custGrade = data.custGrade;
                     $(".fahuofang").show();
-                }                               
+                }
             },
         });
-    }  
+    }
     $(document).on("click","ul.filter_con .con a.img,ul.filter_con .con span a",function(){
         $.ajax({
             type: "GET",
@@ -936,28 +936,28 @@ $(function(){
                 withCredentials: true
             },
             success: function (data) {
-                
+
                 custName = data.XYanJ_C_Nam;
                 if(custName){
                     custId = data.XYanJ_C_id;
                     custType = data.custType;
                     custGrade = data.custGrade;
-                    
-                }   
+
+                }
                 if(custId==""||custId=="null"||custId==null){
                     loginPop.fadeIn();
-                } 
-                
-                                           
+                }
+
+
             },
         });
-    })              
-    
-  
+    })
+
+
 })
 
 jQuery(document).ready(function ($) {
     "use strict";
     $('.content .left').perfectScrollbar();
 });
-    
+

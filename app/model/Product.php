@@ -30,7 +30,6 @@ class Product extends Model
 {
     const TABLE = 'product';
     const TABLE_ORDER = 'disorder desc,id asc';
-    const TABLE_FIELD = 'id,big_img_path,cust_id,img_path,lens_refra_index,lens_type,market_price,mirr_width,nose_width,pay_type,prod_brand,prod_color,prod_material,prod_name,prod_series,prod_shape,prod_type,sku_id,version,shape,style';
+    const TABLE_FIELD = 'id as prod_id,cust_id, "/uploadfile/upload/" as path,img_path as big_img_path,lens_refra_index,lens_type,mirr_width,nose_width,pay_type,prod_brand,prod_color,prod_material,prod_name,prod_series,prod_shape,prod_type,sku_id,version,shape,style';
 
-    public function vision
 }

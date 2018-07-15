@@ -13,9 +13,8 @@ $map = array();
 
 ###########################筛选开始
 $id = I('get.id','','trim');if(!empty($id))$map['id'] = array('like',"%$id%");
-$title = I('get.title','','trim');if(!empty($title))$map['title'] = array('like',"%$title%");
-$brand_id = I('get.brand_id','','intval');if(!empty($brand_id))$map['brand_id'] = $brand_id;
-// $istop2 =  I('get.istop2',0,'intval');if(!empty($istop2))$map['istop2'] = $istop2;
+$prod_brand = I('get.prod_brand','','intval');$prod_brand and $map['prod_brand'] = $prod_brand;
+$prod_series = I('get.prod_series','','intval');$prod_series and $map['prod_series'] = $prod_series;
 ###########################筛选开始
 ########################分页配置开始
 $psize = I('get.psize',30,'intval');
@@ -30,6 +29,8 @@ $pageConfig = array(
 list($data,$pagestr) = Page::paging($pageConfig);
 $opt = new Output;//输出流  输出表单元素
 ########################分页配置结束
+$coustome_shape = config('custome.shape');$coustome_shape[0] = '未选择';
+$coustome_style = config('custome.style');$coustome_style[0] = '未选择';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,15 +46,19 @@ $opt = new Output;//输出流  输出表单元素
             <!-- <b>显示</b><input style="width:50px;" name="psize" type="text" class="dfinput" value="<?=$psize?>"/>条 -->
             <!-- <b>编号</b><input name="id" type="text" class="dfinput" value="<?=$id?>"/> -->
             <?php
-            /*$brandModel = ModelFactory('brand');
-            $d = $brandModel->getField('id,title,initials', 'isstate=1');
+            $brandModel = ModelFactory('brand');
+            $seriesModel = ModelFactory('brandModels');
+
+            $opt->select2($brandModel->getField('id,brand_name', 'isstate=1'), '品牌', 'prod_brand')
+            ->select2($seriesModel->getField('id,title', 'isstate=1'), '系列', 'prod_series');
+            /*$d = $brandModel->getField('id,title,initials', 'isstate=1');
             $groupCate = $brandModel->getInitialsSet('id,initials', $getField=true);
             $opt
                 ->groupSelect2($d, $groupCate,'品牌','brand_id', 'initials')*/
             /*
                $d2 = M('news')->where('pid=3 and ty=21')->order('disorder desc, isgood desc, id asc')->getField('id,name');Output::select2($d2,'风格','istop2');
             */ ?>
-            关键字<input name="title" type="text" class="dfinput" value="<?=$title?>"/>
+<!--            关键字<input name="title" type="text" class="dfinput" value="--><?//=$title?><!--"/>-->
             <input name="search" type="submit" class="btn" value="搜索"/></td>
         </form>
         <div class="zhengwen clr">
@@ -108,14 +113,14 @@ $opt = new Output;//输出流  输出表单元素
                     <?php
 
                     $opt->td(
-                         $img_path
+                         '<img src="'.src($img_path).'"/>'
                         ,$prod_name
                         ,$version
                         ,$prod_color
                         ,$mirr_width
                         ,$nose_width
-                        ,$shape
-                        ,$style
+                        ,$coustome_shape[$shape]
+                        ,$coustome_style[$style]
                     );
                     ?>
 

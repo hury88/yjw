@@ -9,7 +9,7 @@
                     <span class="icon"></span>
                     <span class="phone"></span><a href="/user/logout" class="loginOut" href="">退出</a>
                 </div>
-                <div class="person fn-left haslogout">                        
+                <div class="person fn-left haslogout">
                     <a class="btn homeRegBt mendianReg">门店注册</a>
                    <!-- <a class="btn homeRegBt supplierReg">供应商注册</a>-->
                     {{--<a href="forget.html" class="btn homeRegBt">找回密码</a>--}}
@@ -102,7 +102,7 @@
             <a class="nav_btn" href="message.html">资讯</a>
         </div>
     </div>
-</div>  
+</div>
 <!-- 门店登录 -->
 <div class="login_box loginPop" style="display: none">
     <div class="login"> <img class="close" src="/style/images/close.png">
@@ -121,7 +121,7 @@
         </ul>
         </form>
         <p class="null" style="display: none;">*用户名或者密码不能为空</p>
-        <div class="go_register"> <a class="registerBt">免费注册</a>
+        <div class="go_register"> <a href="/user/zhuce" target="_blank">免费注册</a>
             <div class="clr"></div>
         </div>
     </div>

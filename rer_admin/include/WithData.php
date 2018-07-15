@@ -476,13 +476,25 @@ class WithData
         }
 
 
-        $version = I('post.version', '', 'trim,htmlspecialchars');$version = trim($version, ',');
-        $prod_color = I('post.prod_color', '', 'trim,htmlspecialchars');$prod_color = trim($prod_color, ',');
-        $mirr_width = I('post.mirr_width', '', 'trim,htmlspecialchars');$mirr_width = trim($mirr_width, ',');
-        $nose_width = I('post.nose_width', '', 'trim,htmlspecialchars');$nose_width = trim($nose_width, ',');
+        $market_price = I('post.price', '', 'trim,htmlspecialchars');
 
-        $shape = isset($_POST['shape']) && is_array($_POST['shape'])?implode(',',$_POST['shape']):'';
-        $style = isset($_POST['style']) && is_array($_POST['style'])?implode(',',$_POST['style']):'';
+        $version = I('post.version', '', 'trim,htmlspecialchars');$version = trim($version, ',');
+        $version or  ajaxReturn(-1,'请选择一个型号');
+
+        $prod_color = I('post.prod_color', '', 'trim,htmlspecialchars');$prod_color = trim($prod_color, ',');
+        $prod_color or  ajaxReturn(-1,'请选择一个色号');
+
+        $mirr_width = I('post.mirr_width', '', 'trim,htmlspecialchars');$mirr_width = trim($mirr_width, ',');
+        $mirr_width or  ajaxReturn(-1,'请选择一个镜框尺寸');
+
+        $nose_width = I('post.nose_width', '', 'trim,htmlspecialchars');$nose_width = trim($nose_width, ',');
+        $nose_width or  ajaxReturn(-1,'请选择一个鼻梁尺寸');
+
+        $shape = I('post.shape', 0, 'intval');
+        $shape or  ajaxReturn(-1,'请选择一个框型');
+
+        $style = I('post.style', 0, 'intval');
+        $style or  ajaxReturn(-1,'请选择一个款式');
 
 
 
@@ -497,6 +509,8 @@ class WithData
             'mirr_width' => $mirr_width,
             'nose_width' => $nose_width,
 
+            'market_price' => $market_price,
+
             'shape' => $shape,
             'style' => $style,
 
@@ -504,6 +518,7 @@ class WithData
             'sendtime'		=>	I('post.sendtime',0,'strtotime'),
 
         );
+//        print_r($fields);exit;
 
         uppro('img_path',$fields,'ajax');
 

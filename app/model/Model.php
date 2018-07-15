@@ -131,7 +131,6 @@ class Model
     {
         is_null($order) && $order = static::TABLE_ORDER;
         $data = $this->getDbInstance()->where($where)->order($order)->getField($field);
-
         return $data;
     }
 
@@ -155,7 +154,7 @@ class Model
         return $count;
     }
 
-    public function sum($field, $where) {
+    public function sum($field, $where, $order) {
         $res = $this->getDbInstance()->get_one('sum('.$field.') as sum', static::TABLE, $where, $order);
         return $res['sum'] ? $res['sum'] : 0;
     }

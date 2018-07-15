@@ -285,6 +285,7 @@ return [
 
         'shape' => [1=>'全框', 2=>'无框'],
         'style' => [1=>'通用', 2=>'男款', 3=>'女款', 4=>'儿童款'],
+        'jj_order' => [1=>'sendtime  desc', 2=>'market_price asc'],
 
     ],
 

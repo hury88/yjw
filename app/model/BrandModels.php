@@ -28,14 +28,43 @@ class BrandModels extends Model
      */
     public function explodeResult($field, $brand_id)
     {
-        $brandModelsFind= $this->selectOne($type.',id as theindex', 'isstate=1 and brand_id = '.$brand_id);
+        if(empty($field) || empty($brand_id)) die('缺少 $field || $brand_id');
+        $brandModelsFind= $this->selectOne($field.',id as theindex', 'isstate=1 and brand_id = '.$brand_id);
 
         $brandModelsFindTypeData= [];
 
-        if($brandModelsFind && strpos($brandModelsFind[$type], ',')){
+        if($brandModelsFind && strpos($brandModelsFind[$field], ',')){
 
-            $brandModelsFindTypeData = explode(',', $brandModelsFind[$type]);
+            $brandModelsFindTypeData = explode(',', $brandModelsFind[$field]);
         }
         return $brandModelsFindTypeData;
+    }
+
+    /**
+     * @param $field  [shape, style]
+     * @param $brand_id
+     * @return array
+     */
+    public function explodeResult2($field, $brand_id)
+    {
+
+        if(empty($field) || empty($brand_id)) die('缺少 $field || $brand_id');
+
+        $config = config('custome.'.$field);
+
+        $brandModelsFind = $this->selectOne($field.',id as theindex', 'isstate=1 and brand_id = '.$brand_id);
+
+
+//        $brandModelsFindTypeData= [];
+        $data = [];
+
+        if($brandModelsFind && strpos($brandModelsFind[$field], ',')){
+
+            $brandModelsFindTypeData = explode(',', $brandModelsFind[$field]);
+            foreach ($brandModelsFindTypeData as $index) {
+                $data[$index] = $config[$index];
+            }
+        }
+        return $data;
     }
 }
