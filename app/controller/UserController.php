@@ -18,14 +18,10 @@ class UserController extends Controller
     }
 
     public function zhuce() {
-        $person = Person::get();
-        return $this->view('person', compact('zhuce'));
+       // echo 123123;
+        $this->view('zhuce');
     }
-    public function wap() {
-        $person = Person::get();
-        return $this->mview('person', compact('person'));
 
-    }
     public function ckxx() {
         $this->is_login = true;
         $id = isset($_GET['cid']) ? (int)$_GET['cid'] : '';
@@ -65,7 +61,6 @@ class UserController extends Controller
 
     public function register()
     {
-        if(isset($_POST['iswap'])) $this->redirectTo='/user/wap';
         $verify = [
             'username' => ['required', lang('login_username')],
             'password' => ['need', lang('login_password_empty')],

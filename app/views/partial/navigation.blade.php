@@ -5,24 +5,34 @@
         <div class="wrap">
             <div class="fn-left left">
                 <span class="fn-left welcome">您好 找眼镜网欢迎您！</span>
-                <div class="person fn-left fn-hide haslogin">
-                    <span class="icon"></span>
-                    <span class="phone"></span><a href="/user/logout" class="loginOut" href="">退出</a>
+
+                @if($person->isLogin())
+                <div class="person fn-left haslogin">
+                    <a  href="/user/index"> <span class="icon"></span>
+                    <span class="phone">{{$person->name}}</span></a>
+                    <a style="margin-left:15px " class="btn homeRegBt" href="/user/logout">退出</a>
                 </div>
                 <div class="person fn-left haslogout">
+                @else
+                <div class="person fn-left haslogout">                        
                     <a class="btn homeRegBt mendianReg">门店注册</a>
-                   <!-- <a class="btn homeRegBt supplierReg">供应商注册</a>-->
+                   <a class="btn homeRegBt center">门店登陆</a>
                     {{--<a href="forget.html" class="btn homeRegBt">找回密码</a>--}}
                 </div>
+                @endif
             </div>
             @if($person->isLogin())
                 <div class="fn-right right">
-                    <a href="" class="cartBt"><i class="cart"></i><span>购物车</span></a>
-                    <a href="" class="muOrderBt"><i class="order"></i><span>订单</span></a>
-                    <a href="" class="person center"><i class="personIcon"></i><span>个人中心</span></a>
+                    <a href="/user/car" class=""><i class="cart"></i><span>购物车</span></a>
+                    <a href="/user/car" class=""><i class="order"></i><span>订单</span></a>
+                    <a href="/user/index" class=""><i class="personIcon"></i><span>个人中心</span></a>
                 </div>
             @else
-                <a class="login" href="javascript:;">门店登录</a>
+                <div class="fn-right right">
+                    <a class="center"><i class="cart"></i><span>购物车</span></a>
+                    <a class="center"><i class="order"></i><span>订单</span></a>
+                    <a class="center"><i class="personIcon"></i><span>个人中心</span></a>
+                </div>
             @endif
         </div>
     </div>
@@ -134,7 +144,7 @@
     </div>
     <div class="bd">
         <ul>
-        	<li class="pc26" style="background-image: url(’http://image.zyanjing.com/hotproduct//20171221090625_镜谱PC端.jpg');"><a href="http://www.zyanjing.com/jjSelect.html?256%4" target="_blank"></a></li>
+        	<li class="pc26" style="background-image: url('http://image.zyanjing.com/hotproduct//20171221090625_镜谱PC端.jpg');"><a href="http://www.zyanjing.com/jjSelect.html?256%4" target="_blank"></a></li>
         </ul>
     </div>
 </div>

@@ -159,15 +159,7 @@ function login(){
 
 
 $(".mendianReg").click(function(){//注册
-    window.open(domain+"/shopRegister.jsp");
-});
-
-$(".supplierReg").click(function(){//注册
-    window.open(ztradeDomain+"/ztrade/member/toMemberRegist.do");
-});
-
-$(".loginSupplier").click(function(){//商家入驻
-    window.open(ztradeDomain+"/ztrade/member/getLoginUserInfo.do");
+    window.location.href="/user/zhuce";
 });
 
 /**获取cookie**/
