@@ -66,7 +66,7 @@ $opt = new Output;//输出流  输出表单元素
         <td width="24px">编号</td> <td width="200px">操作</td>
 
     <?php
-        $opt->td('用户名', '账号', '密码','查看信息');
+        $opt->td('用户名', '账号', '密码');
         $opt->td('发布时间|width="104px"');
      ?>
 </tr>
@@ -89,10 +89,9 @@ $opt = new Output;//输出流  输出表单元素
             <a data-class="btn-warm" class="json <?=$isstate==1?'':'btn-warm' ?>" data-url="isstate&id=<?=$id?>"><?=config('webarr.isstate')[$isstate] ?></a>|
             <a href="javascript:;" data-id="<?=$id?>" data-opt="del" class="thick del">删除</a>
         </td>
-        <td><?=$name?></td>
+        <td><a href="/user/ckxx?cid=<?=$id?>" target="_blank">点击编辑“<?=$name?>”的详细信息</a></td>
         <td><?=$username?></td>
         <td><?=$password?></td>
-        <td><a href="/user/ckxx?id=<?=$id?>" target="_blank">查看信息</a></td>
      <td><?=$time?></td>
  </tr>
 <?php endforeach?>

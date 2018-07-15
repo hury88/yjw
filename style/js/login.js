@@ -25,37 +25,37 @@ var loginAccount = loginName,
 
 
 //检查是否已经登录
-checkHasLogin();
-function checkHasLogin(){
-    $.ajax({
-        type: "GET",
-        url: domain + "/member!getUserInfo.shtml",
-        contentType: "text/plain; charset=utf-8",
-        dataType : 'json',
-        xhrFields: {
-            withCredentials: true
-        },
-        success: function (data) {
-            custName = data.XYanJ_C_Nam;
-
-            if(custName){
-                custId = data.XYanJ_C_id;
-                custType = data.custType;
-                custGrade = data.custGrade;
-                custParent = data.custParent;
-                $('.phone').html(data.XYanJ_C_Nam);
-                $(".haslogin").show();
-                $(".haslogout").hide();
-                $('.topBlock').hide();
-
-                /**退出登录**/
-                $('.loginOut').unbind("click").click(function(){
-                    logOutF();
-                });              
-            }
-        }
-    });
-}
+// checkHasLogin();
+// function checkHasLogin(){
+//     $.ajax({
+//         type: "GET",
+//         url: domain + "/member!getUserInfo.shtml",
+//         contentType: "text/plain; charset=utf-8",
+//         dataType : 'json',
+//         xhrFields: {
+//             withCredentials: true
+//         },
+//         success: function (data) {
+//             custName = data.XYanJ_C_Nam;
+//
+//             if(custName){
+//                 custId = data.XYanJ_C_id;
+//                 custType = data.custType;
+//                 custGrade = data.custGrade;
+//                 custParent = data.custParent;
+//                 $('.phone').html(data.XYanJ_C_Nam);
+//                 $(".haslogin").show();
+//                 $(".haslogout").hide();
+//                 $('.topBlock').hide();
+//
+//                 /**退出登录**/
+//                 $('.loginOut').unbind("click").click(function(){
+//                     logOutF();
+//                 });
+//             }
+//         }
+//     });
+// }
 
 // body.click(function(event){
 //     console.log(",..");
@@ -106,73 +106,58 @@ pwd.focus(function(){
 
 
 function login(){
-
+    var hiddenForm = new FormData();
+    var form = loginBt.parents('.form');
+    form.find('input,textarea,select').each(function(i){
+        if (this.type=="file") {
+            hiddenForm.append(this.name, this.files[0])
+        }else if(this.type == 'checkbox'){
+        }else if(this.type == 'radio'){
+            hiddenForm.append(this.name, this.checked);
+        } else {
+            hiddenForm.append(this.name, this.value);
+        }
+    })
+    loginBt.attr('disabled',true);//按钮锁定
     $.ajax({
-        type:"GET",
-        url:domain+"/member!ajaxLoginUser.shtml",
-        data:{account:allLoginAccount,pwd:loginPWD},
+        url  : '/user/login',
+        type : "post",
         dataType : 'json',
-        contentType : "text/plain; charset=utf-8",
-        xhrFields:{
-            withCredentials: true
-        },
-        success:function(data){
-
-            if(data==""||data=="null"||data==null){
-                alert("用户名或者密码错误,请重新输入");
-            }else{            	
-                //setTimeout(checkHasLogin,500);
-                custType = data.custType;
-                custId = data.XYanJ_C_id;
-                console.log(custId);
-                custGrade = data.custGrade;
-                custParent = data.custParent;
-                console.log(custParent);
-                loginPop.fadeOut();
-                $('.phone').html(data.XYanJ_C_Nam);
-                $(".haslogin").show();
-                $(".haslogout").hide();
-                $('.topBlock').hide();
-                window.location.reload();
-                /**退出登录**/
-                $('.logout').unbind("click").click(function(){
-                    logOutF();
-                });
+        data : hiddenForm,
+        cache: false,
+        processData: false,
+        contentType: false,
+        success : function(response){
+            s = response.status
+            m = response.msg
+            d = response.dom
+            loginBt.removeAttr('disabled')
+            if(s==200){
+                // layer.open({content: json.msg ,btn: '确定'})
+                alert(m)
+                if (d) {
+                    window.location.href = d
+                } else {
+                    nullClass.html("登陆成功！");
+                    nullClass.show();
+                    window.location.reload()
+                }
+            }else{
+                nullClass.html(m);
+                nullClass.show();
             }
-
-            /**退出登录**/
-            $('.logout').unbind("click").click(function(){
-                logOutF();
-            });
         },
         error:function(){
             nullClass.html("用户名或者密码错误");
             nullClass.show();
         }
-    });
+    })
+    return false;
 }
 
 
 
-function logOutF(){
-    $.ajax({
-        url:domain+'/logout.shtml',
-        type: 'post',
-        timeout: 10000,
-        xhrFields:{
-            withCredentials: true
-        },
-        error: function(data)
-        {
 
-            window.location.reload();
-        },
-        success: function(data)
-        {
-        	window.location.reload();
-        }
-    });
-}
 $(".mendianReg").click(function(){//注册
     window.open(domain+"/shopRegister.jsp");
 });

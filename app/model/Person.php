@@ -3,7 +3,7 @@ namespace App\model;
 
 class Person extends Model
 {
-    const TABLE = 'member';
+    const TABLE = 'user';
     public static $_cache = [];
     public $is_login = false;
 
@@ -27,16 +27,47 @@ class Person extends Model
         return self::$_cache[$id];
     }
 
+    public function __construct($id)
+    {
+        $this->MD = M(self::TABLE);
+        if ($id !== NULL){
+            $this->_data = $this->MD->find($id);
+            $this->_pk = $id;
+        }
+    }
+
+    public function M()
+    {
+        return $this->MD;
+    }
+
     /**
      * 是否含有
      * @return mixed
      */
     public function has($field, $value, $select = '*')
     {
-        return $this->getDbInstance()->field($select)->where([$field=>$value])->find();
+        return $this->MD->field($select)->where([$field=>$value])->find();
 
     }
+    /**
+     * 是否含有
+     * @return mixed
+     */
+    public function notHas($field, $value)
+    {
+        return ! $this->MD->where([$field=>$value])->find();
+    }
 
+    /**
+     * 是否存在
+     * @return mixed
+     */
+    public function exist()
+    {
+
+        return $this->_data ? true : false;
+    }
 
     /**
      * 获取键值
@@ -85,7 +116,7 @@ class Person extends Model
             'lastlogintime'  => time(),
             'logtimes' => ['exp', 'logtimes+1'],
         ];
-        $result =  $this->getDbInstance()->where(['id' => $this->_pk])->update($data);
+        $result =  $this->MD->where(['id' => $this->_pk])->update($data);
 
         self::setUserId($this->_pk);
         $this->is_login = true;

@@ -24,7 +24,7 @@ define('METHOD', $method);
 // 引入业务处理代码
 
 //require_once __DIR__.'/app/processing.php';
-//$person = \App\model\Person::get();
+$person = \App\model\Person::get();
 
 $controllerClassName = $namespace . ucfirst($controller) . 'Controller';
 if (class_exists($controllerClassName) && method_exists($controllerClassName, $method)) {

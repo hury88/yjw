@@ -79,6 +79,7 @@ if(IS_POST){
 
 				$delStatus= deleteUsers($ids);
 
+                break;
 			case 'usr_need':
 
 				$delStatus= deleteUsrNeed($ids);
