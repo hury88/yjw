@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f347db4f-fd7a-47bd-9da4-365bf2e281b3" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/model/BrandModels.php" afterPath="$PROJECT_DIR$/app/model/BrandModels.php" />
-      <change beforePath="$PROJECT_DIR$/app/model/Product.php" afterPath="$PROJECT_DIR$/app/model/Product.php" />
-      <change beforePath="$PROJECT_DIR$/config.inc.php" afterPath="$PROJECT_DIR$/config.inc.php" />
-      <change beforePath="$PROJECT_DIR$/rer_admin/a-product.php" afterPath="$PROJECT_DIR$/rer_admin/a-product.php" />
       <change beforePath="$PROJECT_DIR$/rer_admin/a-product_pro.php" afterPath="$PROJECT_DIR$/rer_admin/a-product_pro.php" />
-      <change beforePath="$PROJECT_DIR$/rer_admin/include/WithData.php" afterPath="$PROJECT_DIR$/rer_admin/include/WithData.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,8 +27,8 @@
       <file leaf-file-name="BrandModels.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/model/BrandModels.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="489">
+              <caret line="28" column="33" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -43,8 +37,11 @@
       <file leaf-file-name="a-product_pro.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rer_admin/a-product_pro.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="58" column="10" lean-forward="true" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
+            <state relative-caret-position="673">
+              <caret line="65" column="58" lean-forward="true" selection-start-line="65" selection-start-column="58" selection-end-line="65" selection-end-column="71" />
+              <caret line="66" column="61" lean-forward="true" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="74" />
+              <caret line="67" column="63" lean-forward="true" selection-start-line="67" selection-start-column="63" selection-end-line="67" selection-end-column="76" />
+              <caret line="68" column="63" lean-forward="true" selection-start-line="68" selection-start-column="63" selection-end-line="68" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -315,12 +312,12 @@
       <workItem from="1530068073984" duration="2997000" />
       <workItem from="1530801896616" duration="1266000" />
       <workItem from="1530810763513" duration="534000" />
-      <workItem from="1531591316556" duration="3109000" />
+      <workItem from="1531591316556" duration="4342000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51009000" />
+    <option name="totallyTimeSpent" value="52242000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="1936" height="1066" extended-state="6" />
@@ -730,16 +727,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/model/BrandModels.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="489">
+          <caret line="28" column="33" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rer_admin/a-product_pro.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="58" column="10" lean-forward="true" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
+        <state relative-caret-position="673">
+          <caret line="65" column="58" lean-forward="true" selection-start-line="65" selection-start-column="58" selection-end-line="65" selection-end-column="71" />
+          <caret line="66" column="61" lean-forward="true" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="74" />
+          <caret line="67" column="63" lean-forward="true" selection-start-line="67" selection-start-column="63" selection-end-line="67" selection-end-column="76" />
+          <caret line="68" column="63" lean-forward="true" selection-start-line="68" selection-start-column="63" selection-end-line="68" selection-end-column="76" />
           <folding />
         </state>
       </provider>

@@ -1,0 +1,13 @@
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+/app/storage/*
+/node_modules/*
+/storage/files/*
+composer.lock
+/.idea/
+*.log
+.project
+/.tags
+/public/ignore/*

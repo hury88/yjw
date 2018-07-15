@@ -58,15 +58,15 @@ if (isset($_GET['action']) && $_GET['action']=='delImg') {
 //    $opt
 //        ->groupSelect($d, $groupCate,'品牌','brand_id', 'initials');
     $opt
-        ->input('图片','img_path')
+        ->img('图片','img_path')
         ->input('名称','prod_name')
         ->cache()
             ->input('价格','price')
         ->flur()
-        ->choose('型号','version')->radiobox( $seriesModel->explode('version', $brand_id) )
-        ->choose('色号','prod_color')->radiobox( $seriesModel->explode('prod_color', $brand_id) )
-        ->choose('镜框尺寸','mirr_width')->radiobox( $seriesModel->explode('mirr_width', $brand_id) )
-        ->choose('鼻梁尺寸','nose_width')->radiobox( $seriesModel->explode('nose_width', $brand_id) )
+        ->choose('型号','version')->radiobox( $seriesModel->explodeResult('version', $brand_id) )
+        ->choose('色号','prod_color')->radiobox( $seriesModel->explodeResult('prod_color', $brand_id) )
+        ->choose('镜框尺寸','mirr_width')->radiobox( $seriesModel->explodeResult('mirr_width', $brand_id) )
+        ->choose('鼻梁尺寸','nose_width')->radiobox( $seriesModel->explodeResult('nose_width', $brand_id) )
     ;
 
 include('js/foot');
