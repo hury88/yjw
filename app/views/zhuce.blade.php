@@ -436,7 +436,6 @@
                 return false;
             }
             //异步提交注册表单
-            alert(123)
             var hiddenForm = new FormData();
             var form = $("#member_0").parents('.form');
             form.find('input,textarea,select').each(function(i){

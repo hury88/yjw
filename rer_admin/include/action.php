@@ -518,9 +518,9 @@ function deleteUsers($ids,$map=array()){//删除人员
 
 	$map['id']  = array('in',$ids);
 	$path = trim(ROOT_PATH, DS) . config('pic.headimg');
-	$data = M('usr_need')->where($map)->select();
+	$data = M('user')->where($map)->select();
 	M()->startTrans();
-	if(M('usr_need')->delete($ids)):
+	if(M('user')->delete($ids)):
 
 		foreach ($data as $row) {
 			@isset($row['headimg']) ? @unlink($path.$row['headimg']) : '';

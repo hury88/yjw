@@ -17,7 +17,8 @@ $namespace = '\\App\\controller\\';
 // 路由解析 model或者controller
 list($controller, $method) = \Core\Config::route($requestUri);//echo $controller, '----', $method;
 
-define('IS_INDEX',$method == 'index');
+define('IS_INDEX',$controller == 'index');
+//define('IS_INDEX',$method == 'index');
 define('CONTROLLER', $controller);
 define('METHOD', $method);
 
