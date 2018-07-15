@@ -24,8 +24,8 @@
             </div>
             @if($person->isLogin())
                 <div class="fn-right right">
-                    <a href="/user/car" class=""><i class="cart"></i><span>购物车</span></a>
-                    <a href="/user/car" class=""><i class="order"></i><span>订单</span></a>
+                    <a href="/user/cart" class=""><i class="cart"></i><span>购物车</span></a>
+                    <a href="/user/order" class=""><i class="order"></i><span>订单</span></a>
                     <a href="/user/index" class=""><i class="personIcon"></i><span>个人中心</span></a>
                 </div>
             @else
@@ -110,7 +110,7 @@
                     </li>
                 </ul>
             </div>
-            <a class="nav_btn" href="business.html">找商家</a>
+            <!-- <a class="nav_btn" href="business.html">找商家</a> -->
             <a class="nav_btn" href="index-1.html">首页</a>
             <a class="nav_btn" href="message.html">资讯</a>
         </div>

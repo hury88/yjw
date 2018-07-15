@@ -16,7 +16,13 @@ class MemberController extends Controller
     {
         $person = Person::get();
         if ($person->isLogin()) {
-            die(json_decode($person));
+            $result = array(
+                'XYanJ_C_Nam' => $person->name,
+                'XYanJ_C_id' => $person->id,
+                'custType' => '',
+                'custGrade' => ''
+            );
+            die(json_encode($result));
         }
         die('{"XYanJ_C_Nam":"","XYanJ_C_id":"","custType":"","custGrade":"","custParent":""}');
     }

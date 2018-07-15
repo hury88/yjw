@@ -72,8 +72,13 @@
 </div>
 <!-- 右侧导航 -->
 <div class="sideNav">
+    <?php if($person->isLogin()): ?>
+    <a href="/user/order" class=""><p>我的订单</p><i></i></a>
+    <a href="user/cart" class=""><p>购物车</p><i class="gwc"></i></a>
     <a href="javascript:;" class="muOrderBt"><p>我的订单</p><i></i></a>
     <a href="javascript:;" class="cartBt"><p>购物车</p><i class="gwc"></i></a>
+    <?php else: ?>
+    <?php endif; ?>
     <a href="#"><p class="code"><img src="/style/images/smallAC.png" alt=""></p><i class="ewm"></i></a>
     <style>
         .sideNav a p.code{ height:93px; background: none}

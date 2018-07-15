@@ -8,9 +8,7 @@
 	var parentId = 'null'
 	</script>
 	<script src="/style/common/js/constant.js"></script>
-	<script src="/style/js_new/login.js"></script>
-	<script src="/style/js_new/common.js"></script>
-	<script src="/style/js_new/allSearch.js"></script> 
+	<script src="/style/js/login.js"></script>
 	<!-- 面包屑 -->
 	<div class="bread wrap">
 		<a href="/">首页</a>>@yield('mianbaoxie')
@@ -41,5 +39,6 @@
 		<div class="fn-right right">
 			@yield('right')
 		</div>
+		@yield('right-outter')
 	</div>
 @stop

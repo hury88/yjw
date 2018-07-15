@@ -24,38 +24,38 @@ var loginAccount = loginName,
     custParent=null;
 
 
-//检查是否已经登录
-// checkHasLogin();
-// function checkHasLogin(){
-//     $.ajax({
-//         type: "GET",
-//         url: domain + "/member!getUserInfo.shtml",
-//         contentType: "text/plain; charset=utf-8",
-//         dataType : 'json',
-//         xhrFields: {
-//             withCredentials: true
-//         },
-//         success: function (data) {
-//             custName = data.XYanJ_C_Nam;
-//
-//             if(custName){
-//                 custId = data.XYanJ_C_id;
-//                 custType = data.custType;
-//                 custGrade = data.custGrade;
-//                 custParent = data.custParent;
-//                 $('.phone').html(data.XYanJ_C_Nam);
-//                 $(".haslogin").show();
-//                 $(".haslogout").hide();
-//                 $('.topBlock').hide();
-//
-//                 /**退出登录**/
-//                 $('.loginOut').unbind("click").click(function(){
-//                     logOutF();
-//                 });
-//             }
-//         }
-//     });
-// }
+// 检查是否已经登录
+checkHasLogin();
+function checkHasLogin(){
+    $.ajax({
+        type: "GET",
+        url: domain + "/member!getUserInfo.shtml",
+        contentType: "text/plain; charset=utf-8",
+        dataType : 'json',
+        xhrFields: {
+            withCredentials: true
+        },
+        success: function (data) {
+            custName = data.XYanJ_C_Nam;
+
+            if(custName){
+                custId = data.XYanJ_C_id;
+                custType = data.custType;
+                custGrade = data.custGrade;
+                custParent = data.custParent;
+                $('.phone').html(data.XYanJ_C_Nam);
+                $(".haslogin").show();
+                $(".haslogout").hide();
+                $('.topBlock').hide();
+
+                /**退出登录**/
+                $('.loginOut').unbind("click").click(function(){
+                    logOutF();
+                });
+            }
+        }
+    });
+}
 
 // body.click(function(event){
 //     console.log(",..");
@@ -239,7 +239,7 @@ $(document).on("click","a.ljxd",function(){
    if(custId==""||custId=="null"||custId==null){
         loginPop.fadeIn();
     }
-    return false; 
+    return false;
 })
 
 // 登录框
@@ -280,11 +280,11 @@ $(".nav_btn:eq(2)").click(function(){
 			{
 				return price;
 			}
-			
+
 		}
-					
+
     }
-    
+
     function decimal(num,v){
 	var vv = Math.pow(10,v);
 	return parseFloat(Math.round(num*vv)/vv).toFixed(2);

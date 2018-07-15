@@ -34,6 +34,7 @@ function checkHasLogin(){
             withCredentials: true
         },
         success: function (data) {
+            console.log(data)
             custName = data.XYanJ_C_Nam;
 
             if(custName){
@@ -48,7 +49,7 @@ function checkHasLogin(){
                 /**退出登录**/
                 $('.loginOut').unbind("click").click(function(){
                     logOutF();
-                });              
+                });
             }
         }
     });
@@ -121,7 +122,7 @@ function login(){
 
             if(data==""||data=="null"||data==null){
                 alert("用户名或者密码错误,请重新输入");
-            }else{            	
+            }else{
                 //setTimeout(checkHasLogin,500);
                 custType = data.custType;
                 custId = data.XYanJ_C_id;
@@ -205,7 +206,7 @@ function getPrice(originalPrice, isFloat)
 		{
 			return originalPrice
 		}
-		
+
 	}
 }
 

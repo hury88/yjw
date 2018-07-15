@@ -219,4 +219,9 @@ class UserController extends Controller
     {
         return $this->view('order');
     }
+
+    public function cart()
+    {
+        return $this->view('cart');
+    }
 }
