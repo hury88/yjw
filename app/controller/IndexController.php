@@ -14,7 +14,6 @@ class IndexController extends Controller
 
     public function index()
     {
-
         // $data = v_news(8, -16, '*');
         //$this->view('index', compact('data'));
         $this->view('index');
@@ -26,7 +25,6 @@ class IndexController extends Controller
     }
     public function jjSelect()
     {
-
         $this->view('jjSelect');
     }
 
