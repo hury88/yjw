@@ -329,66 +329,7 @@
             }
         }
 
-        function checkEmail(){
-            var email = $("#cust_email")[0].value;
-            /*if(email == "" || email == null){
-                $("#cust_email_")[0].innerHTML = "- 邮件地址不能为空";
-                setRed("cust_email_");
-                return false;
-            }*/
 
-            var reg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
-            if(!reg.test(email)){
-                $("#cust_email_")[0].innerHTML = "- 邮件地址不合法";
-                setRed("cust_email_");
-                return false;
-            }
-            var hiddenForm = new FormData();
-            var form = $("#member_0").parents('.form');
-            form.find('input,textarea,select').each(function(i){
-                if (this.type=="file") {
-                    hiddenForm.append(this.name, this.files[0])
-                }else if(this.type == 'checkbox'){
-                }else if(this.type == 'radio'){
-                    hiddenForm.append(this.name, this.checked);
-                } else {
-                    hiddenForm.append(this.name, this.value);
-                }
-            })
-            $("#member_0").attr('disabled',true);//按钮锁定
-            $.ajax({
-                url  : '/user/register',
-                type : "post",
-                dataType : 'json',
-                data : hiddenForm,
-                cache: false,
-                processData: false,
-                contentType: false,
-                success : function(response){
-                    s = response.status
-                    m = response.msg
-                    d = response.dom
-                    $("#member_0").removeAttr('disabled')
-                    if(s==200){
-                        // layer.open({content: json.msg ,btn: '确定'})
-                        alert(m)
-                        if (d) {
-                            window.location.href = d
-                        } else {
-                            window.location.reload()
-                        }
-                    }else{
-                        alert(m);
-                        form.find("input[name="+d+"]").focus()
-                    }
-                },
-                error : function(){
-                    $("#member_0").removeAttr('disabled');
-                    alert('请按照提示操作, 以获得更好的服务');
-                }
-            })
-            return false;
-        }
 
         /*function checkPassword(){
             var reg = /^[a-zA-Z0-9]{6,20}$/g;
@@ -495,8 +436,52 @@
                 return false;
             }
             //异步提交注册表单
-            $.blockUI({ message: $('.overlay') });
-            return true;
+            alert(123)
+            var hiddenForm = new FormData();
+            var form = $("#member_0").parents('.form');
+            form.find('input,textarea,select').each(function(i){
+                if (this.type=="file") {
+                    hiddenForm.append(this.name, this.files[0])
+                }else if(this.type == 'checkbox'){
+                }else if(this.type == 'radio'){
+                    hiddenForm.append(this.name, this.checked);
+                } else {
+                    hiddenForm.append(this.name, this.value);
+                }
+            })
+            $("#member_0").attr('disabled',true);//按钮锁定
+            $.ajax({
+                url  : '/user/register',
+                type : "post",
+                dataType : 'json',
+                data : hiddenForm,
+                cache: false,
+                processData: false,
+                contentType: false,
+                success : function(response){
+                    s = response.status
+                    m = response.msg
+                    d = response.dom
+                    $("#member_0").removeAttr('disabled')
+                    if(s==200){
+                        // layer.open({content: json.msg ,btn: '确定'})
+                        alert(m)
+                        if (d) {
+                            window.location.href = d
+                        } else {
+                            window.location.reload()
+                        }
+                    }else{
+                        alert(m);
+                        form.find("input[name="+d+"]").focus()
+                    }
+                },
+                error : function(){
+                    $("#member_0").removeAttr('disabled');
+                    alert('请按照提示操作, 以获得更好的服务');
+                }
+            })
+            return false;
         }
 
 
@@ -512,7 +497,7 @@
     <div class="content">
         <div class="right">
             <div class="titlegray">在线注册申请</div>
-            <form id="member" class="form" name="member" onsubmit="return validate();" action="/user/register" method="post" enctype="multipart/form-data">
+            <form id="member" class="form" name="member"  action="/user/register" method="post" enctype="multipart/form-data">
                 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="biaoge2">
                     <tr>
                         <td width="150" align="right" bgcolor="#f0f0f0">公司</td>
@@ -527,13 +512,13 @@
                         <td align="right" bgcolor="#f0f0f0">所在地区</td>
                         <td align="left" >
                             <select name="z_1" id="province" onchange="Province()" class="province">
-                                <option value="">请选择省份</option>
+                                <option value="2">请选择省份</option>
                             </select>
                             <select name="z_11" id="cities" class="cities" onchange="City()">
-                                <option value="">请选择城市</option>
+                                <option value="3">请选择城市</option>
                             </select>
                             <select name="z_12" id="areas" onchange="Area()">
-                                <option value="">请选区/县</option>
+                                <option value="4">请选区/县</option>
                             </select>
                             <input type="text" name="z_13" maxlength="400" value="" id="street_add" style="width:60%;height:20px; border:1px solid #ccc;margin-top:1px"/>
 
@@ -612,7 +597,7 @@
                     </tr>
                 </table>
 
-                <p class="g_tc"><input type="submit" id="member_0" value="&#27880;&#20876;" class="modify_input"/>
+                <p class="g_tc"><input type="submit" onclick="return validate();" id="member_0" value="&#27880;&#20876;" class="modify_input"/>
 
                     <input type="button" value="取消" class="modify_input" onclick="history.go(-1)"/></p>
 
@@ -632,5 +617,13 @@
 </div>
 @stop
 @section('scripts')
+    @parent
+    <script type="text/javascript" src="/style/js/jquery.min.js"></script>
+    <script src="/style/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="/style/js/Marquee.js"></script>
+    <script src="/style/js/main.js"></script>
+    <script src="/style/js/login.js"></script>
 
+    <script type="text/javascript" src="/style/js/homeajax.js"></script>
+    <script src="/style/js/allSearch.js"></script> 
     @stop
