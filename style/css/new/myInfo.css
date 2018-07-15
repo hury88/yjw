@@ -1,0 +1,152 @@
+
+.myinfo td
+{
+	font-size:14px;
+}
+
+.content .right {
+  width: 1025px;
+}
+.info_logo
+{	
+    height: 28px;
+    line-height: 28px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;	
+}
+
+/* 面包屑 */
+.bread {
+  line-height: 45px;
+  font-size: 14px;
+}
+/* 内容部分 */
+.content .left {
+  width: 175px;
+}
+.content .left ul {
+  margin-top: 20px;
+}
+.content .left ul li {
+  line-height: 28px;
+  font-size: 14px;
+}
+.content .left ul li.name {
+  font-size: 15px;
+  font-weight: bold;
+}
+.content .left ul li span {
+  display: block;
+  padding-left: 10px;
+  font-size: 16px;
+  color: #0093ff;
+}
+
+.biaoge2 {
+	border-collapse: collapse;
+	margin: 15px auto;
+	clear: both;
+	line-height: 20px;
+}
+.biaoge2 tr{ height:30px;}
+
+.biaoge2 td {
+	/**border: #ccc solid 1px;**/
+	background:#fff;
+	padding: 5px;
+	font-size:14px;
+}
+
+
+.biaoge3 {
+	border-collapse: collapse;
+	margin: 15px 0;
+	clear: both;
+	line-height: 20px;
+}
+
+.biaoge3 td {
+	border: #fff solid 1px;
+	padding: 5px;
+	font-size:14px;
+}
+
+.modify {
+	line-height: 24px;
+	padding-left: 5px;
+	margin-top: 15px;
+	font-size:14px;
+}
+
+.modify_input, .modify_input1{
+	color: #fff;
+	font-weight: bold;
+	background: #007eda;
+	width: 63px;
+	height: 28px;
+}
+
+
+.return_left {
+	float: left;
+	height: auto;
+}
+.return_left h1 {
+	width: auto;
+	padding: 5px 20px 5px 20px;
+	background-color: #007eda;
+	color: #fff;
+	font-size: 14px;
+}
+
+.return_left h1 a {
+	color: #fff;
+	font-size: 14px;
+}
+
+.g_red,.g_red a {
+	font-size: 12px;
+	color: #007eda;
+}
+
+.sms1 {
+	margin: 15px auto;
+	height: auto;
+	background-image: url(../../images/background_bg3.jpg);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	padding-bottom: 5px;
+	overflow: auto;
+}
+
+.sms1_left {
+	float: left;
+	height: auto;
+	padding-left: 5px;
+}
+
+.sms1_left img {
+	border: 1px solid #ccc;
+}
+
+.address {
+	padding-left: 10px;
+	padding-top: 5px;
+	font-size:14px;
+}
+
+.anniu a {
+	padding: 5px 10px;
+	background: #f0f0f0;
+	border: 1px solid #ccc;
+}
+.fn-right p
+{
+	font-size:14px;
+}
+
+.modify_input,.modify_input1
+{
+	border:0px;
+}

@@ -4,17 +4,18 @@
     <div class="head_box">
         <div class="wrap">
             <div class="fn-left left">
-                <span class="fn-left welcome">您好 找眼镜网欢迎您！</span>
+                <span class="fn-left welcome">您好 <?=$system_sitename?>欢迎您！</span>
 
                 @if($person->isLogin())
                 <div class="person fn-left haslogin">
-                    <a  href="/user/index"> <span class="icon"></span>
-                    <span class="phone">{{$person->name}}</span></a>
-                    <a style="margin-left:15px " class="btn homeRegBt" href="/user/logout">退出</a>
+                    <a  href="/user/index">
+                        <span class="icon"></span>
+                        <span class="phone">{{$person->name}}</span>
+                    </a>
+                    <a style="margin-left:15px " class="loginOut" href="/user/logout">退出</a>
                 </div>
-                <div class="person fn-left haslogout">
                 @else
-                <div class="person fn-left haslogout">                        
+                <div class="person fn-left haslogout">
                     <a class="btn homeRegBt mendianReg">门店注册</a>
                    <a class="btn homeRegBt center">门店登陆</a>
                     {{--<a href="forget.html" class="btn homeRegBt">找回密码</a>--}}
@@ -45,16 +46,17 @@
                 </a>
             </div>
             <div class="loginBox fn-left">
-                <div class="topBlock">
                     @if($person->isLogin())
-                        <a class="login" href="/user/index">门店中心</a>
+                        <!-- <a class="login" href="/user/index">门店中心</a> -->
                     @else
+                    <div class="topBlock">
                         <a class="login" href="javascript:;">门店登录</a>
 
-                @endif
+                    </div>
+                    @endif
                     <!--<a class="loginSupplier">供应商入驻</a>-->
-                </div>
                 <div class="bottomBlock">
+                    <p><i class="tel"></i>18013382890（客服电话和微信号）</p>
                     <p><i class="tel"></i>18013382890（客服电话和微信号）</p>
                 	<p><i class="tel"></i>18013380871（客服电话和微信号）</p>
                 </div>
@@ -70,6 +72,7 @@
             </div>
         </div>
     </div>
+
     <!-- 导航部分 -->
     <div class="nav">
         <div class="wrap">
@@ -112,7 +115,6 @@
             <a class="nav_btn" href="message.html">资讯</a>
         </div>
     </div>
-</div>
 <!-- 门店登录 -->
 <div class="login_box loginPop" style="display: none">
     <div class="login"> <img class="close" src="/style/images/close.png">

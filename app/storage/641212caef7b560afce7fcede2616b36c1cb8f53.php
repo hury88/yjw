@@ -4,25 +4,36 @@
     <div class="head_box">
         <div class="wrap">
             <div class="fn-left left">
-                <span class="fn-left welcome">您好 找眼镜网欢迎您！</span>
-                <div class="person fn-left fn-hide haslogin">
-                    <span class="icon"></span>
-                    <span class="phone"></span><a href="/user/logout" class="loginOut" href="">退出</a>
+                <span class="fn-left welcome">您好 <?=$system_sitename?>欢迎您！</span>
+
+                <?php if($person->isLogin()): ?>
+                <div class="person fn-left haslogin">
+                    <a  href="/user/index">
+                        <span class="icon"></span>
+                        <span class="phone"><?php echo __e($person->name); ?></span>
+                    </a>
+                    <a style="margin-left:15px " class="loginOut" href="/user/logout">退出</a>
                 </div>
-                <div class="person fn-left haslogout">                        
+                <?php else: ?>
+                <div class="person fn-left haslogout">
                     <a class="btn homeRegBt mendianReg">门店注册</a>
-                   <!-- <a class="btn homeRegBt supplierReg">供应商注册</a>-->
+                   <a class="btn homeRegBt center">门店登陆</a>
                     
                 </div>
+                <?php endif; ?>
             </div>
             <?php if($person->isLogin()): ?>
                 <div class="fn-right right">
-                    <a href="" class="cartBt"><i class="cart"></i><span>购物车</span></a>
-                    <a href="" class="muOrderBt"><i class="order"></i><span>订单</span></a>
-                    <a href="" class="person center"><i class="personIcon"></i><span>个人中心</span></a>
+                    <a href="/user/car" class=""><i class="cart"></i><span>购物车</span></a>
+                    <a href="/user/car" class=""><i class="order"></i><span>订单</span></a>
+                    <a href="/user/index" class=""><i class="personIcon"></i><span>个人中心</span></a>
                 </div>
             <?php else: ?>
-                <a class="login" href="javascript:;">门店登录</a>
+                <div class="fn-right right">
+                    <a class="center"><i class="cart"></i><span>购物车</span></a>
+                    <a class="center"><i class="order"></i><span>订单</span></a>
+                    <a class="center"><i class="personIcon"></i><span>个人中心</span></a>
+                </div>
             <?php endif; ?>
         </div>
     </div>
@@ -35,16 +46,17 @@
                 </a>
             </div>
             <div class="loginBox fn-left">
-                <div class="topBlock">
                     <?php if($person->isLogin()): ?>
-                        <a class="login" href="/user/index">门店中心</a>
+                        <!-- <a class="login" href="/user/index">门店中心</a> -->
                     <?php else: ?>
+                    <div class="topBlock">
                         <a class="login" href="javascript:;">门店登录</a>
 
-                <?php endif; ?>
+                    </div>
+                    <?php endif; ?>
                     <!--<a class="loginSupplier">供应商入驻</a>-->
-                </div>
                 <div class="bottomBlock">
+                    <p><i class="tel"></i>18013382890（客服电话和微信号）</p>
                     <p><i class="tel"></i>18013382890（客服电话和微信号）</p>
                 	<p><i class="tel"></i>18013380871（客服电话和微信号）</p>
                 </div>
@@ -60,6 +72,7 @@
             </div>
         </div>
     </div>
+
     <!-- 导航部分 -->
     <div class="nav">
         <div class="wrap">
@@ -102,7 +115,6 @@
             <a class="nav_btn" href="message.html">资讯</a>
         </div>
     </div>
-</div>  
 <!-- 门店登录 -->
 <div class="login_box loginPop" style="display: none">
     <div class="login"> <img class="close" src="/style/images/close.png">
@@ -121,7 +133,7 @@
         </ul>
         </form>
         <p class="null" style="display: none;">*用户名或者密码不能为空</p>
-        <div class="go_register"> <a class="registerBt">免费注册</a>
+        <div class="go_register"> <a href="/user/zhuce" target="_blank">免费注册</a>
             <div class="clr"></div>
         </div>
     </div>
@@ -134,7 +146,7 @@
     </div>
     <div class="bd">
         <ul>
-        	<li class="pc26" style="background-image: url(’http://image.zyanjing.com/hotproduct//20171221090625_镜谱PC端.jpg');"><a href="http://www.zyanjing.com/jjSelect.html?256%4" target="_blank"></a></li>
+        	<li class="pc26" style="background-image: url('http://image.zyanjing.com/hotproduct//20171221090625_镜谱PC端.jpg');"><a href="http://www.zyanjing.com/jjSelect.html?256%4" target="_blank"></a></li>
         </ul>
     </div>
 </div>

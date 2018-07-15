@@ -1,0 +1,36 @@
+* {margin: 0;padding: 0;}
+body {min-width: 1200px;background:#fafafa; font-size:14px;}
+ul li {list-style: none;}
+a {text-decoration: none;cursor: pointer;}
+.clear {clear: both;}
+img{font-size:0px;}
+/*头部样式开始*/
+.head_box{background:#f2f2f2; color:#676767;border-bottom:1px solid #b7b7b7; height:26px; line-height:26px;font-size: 12px;}
+.w1200{width:1200px;margin: 0 auto;overflow: visible; }
+.toplink{float:left;}
+.toplink span{margin-right: 10px}
+.toplink a{margin-right: 5px; margin-left:5px;}
+.w1200 a:hover{ text-decoration:underline;}
+
+.topmenu{float:right;}
+.topmenu span{margin-left:10px;}
+.topmenu a{margin-right: 5px; margin-left:5px;font-size: 12px!important;}
+.topmenu a:hover,.toplink a:hover{color: #676767!important;}
+.toplink a{color: #676767!important;}
+/*头部样式结束*/
+
+/*LOGO搜索栏*/
+.headLogo_box{background:#fff; color:#c0c0c0; height:120px;}
+.headLogo_auto{width:1200px;margin: 0 auto;overflow: visible; }
+.base_logo img{width:200px;margin-top: 19px;}
+
+.base_logo{float:left;display: block;}
+.base_search{float:left;margin-left: 70px}
+
+.base_search_form{margin: 26px 60px;}
+.base_search_form .base_search_input{float:left; border:3px solid #3a7dda; width:500px; height:35px; line-height:35px;padding-left:10px; font-size:16px; color:#282828
+;}
+.base_search_form .base_search_btn{float:left; cursor: pointer;width:96px; border:0px; height:41px; line-height:41px; color:#fff; background:#3a7dda; text-align:center; font-size:16px;}
+.base_search_form .base_search_btn:hover{background:#286DCC;}
+.base_search_text a{ margin-right:10px; line-height:30px; color:#c0c0c0; font-size:14px;}
+.base_search_text a:hover{color:#A9A9A9;}
