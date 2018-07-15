@@ -62,48 +62,49 @@ class UserController extends Controller
     public function register()
     {
         $verify = [
-            'username' => ['required', lang('login_username')],
-            'password' => ['need', lang('login_password_empty')],
+            'username' => ['need', ''],
+            'z_1' => ['need', ''],
+            'z_2' => ['need', ''],
+            'z_3' => ['need', ''],
+            'z_4' => ['need', ''],
+            'z_5' => ['need', ''],
+            'z_6' => ['need', ''],
         ];
-
         $form = new VerifyForm($verify, 'post');
         #验证不通过
         if ($form->result()) {
             returnJson(-100, $form->error, $form->field);
         }
-        #更新密码
-        // $file = uppro_file('file', lang('pic.document'));
+        $z_7 = uppro_file('z_7', lang('pic.upload'));
+        $z_8 = uppro_file('z_8', lang('pic.upload'));
+        $z_9 = uppro_file('z_9', lang('pic.upload'));
 
-        #判断用户是否存在
-        if ($user = Person::get()->has('username', $form->username, 'id,password,randcode')) {
 
-            // if ($user['password'] == VerifyForm::md5($form->password, $user['randcode'])) {
-            if ($user['password'] == $form->password) {
-                Person::get($user['id'])->login();
 
-                returnJson(200, lang('reg_failed'), $this->redirectTo);
-            } else {
-
-                returnJson(-100, lang('reg_failed'));
-            }
+        $data=array(
+            'isstate'=>0,
+            'username'=>$form->username,
+            'name'=>$form->username,
+            'z_0' => I('post.z_0', '', 'trim,htmlspecialchars'),
+            'z_1' => I('post.z_1', '', 'trim,htmlspecialchars'),
+            'z_2' => I('post.z_2', '', 'trim,htmlspecialchars'),
+            'z_3' => I('post.z_3', '', 'trim,htmlspecialchars'),
+            'z_4' => I('post.z_4', '', 'trim,htmlspecialchars'),
+            'z_5' => I('post.z_5', '', 'trim,htmlspecialchars'),
+            'z_6' => I('post.z_6', '', 'trim,htmlspecialchars'),
+            'z_7' =>$z_7,
+            'z_8' => $z_8,
+            'z_9' => $z_9,
+            'sendtime' => time(),
+        );
+        if($insert = M('user')->insert($data) ) {
+            Person::get($insert)->login();
+            returnJson(200, lang('reg_success'),'/index/index');
         }else{
-            $data=array(
-                'isstate'=>1,
-                'username'=>$form->username,
-                'password'=>$form->password,
-                'name'=>$form->username
-            );
-            if($insert = M('user')->insert($data) ) {
-                Person::get($insert)->login();
-                returnJson(200, lang('reg_success'),'/web/user');
-            }else{
-                returnJson(-100,'网络繁忙稍后再试！');
-
-            }
+            returnJson(-100,'网络繁忙稍后再试！');
 
         }
     }
-
     public function logout(){
         Person::get()->loginOut();
         \Core\response\Redirect::JsSuccess('确认退出...', '/index');
