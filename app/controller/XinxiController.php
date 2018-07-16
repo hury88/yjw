@@ -19,13 +19,19 @@ class XinxiController extends UserController
     }
 
     public function ckxx() {
+    $this->is_login = true;
+    $id = isset($_GET['cid']) ? (int)$_GET['cid'] : '';
+    $person = Person::get($id);
+    return $this->view('ckxx', compact('person'));
+
+}
+    public function address() {
         $this->is_login = true;
-        $id = isset($_GET['cid']) ? (int)$_GET['cid'] : '';
-        $person = Person::get($id);
-        return $this->view('ckxx', compact('person'));
+        $person = Person::get();
+        $address=v_list('address','*',array('isstate'=>1));
+        return $this->view('address', compact('person','address'));
 
     }
-
     public function register()
     {
         $verify = [
