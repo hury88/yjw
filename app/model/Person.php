@@ -29,6 +29,7 @@ class Person extends Model
 
     public function __construct($id)
     {
+        
         $this->MD = M(self::TABLE);
         if ($id !== NULL){
             $this->_data = $this->MD->find($id);
