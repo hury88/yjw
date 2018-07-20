@@ -31,7 +31,6 @@ class UserController extends Controller
     }
     public function login()
     {
-
         if(isset($_POST['iswap'])) $this->redirectTo='/user/wap';
         $verify = [
             'username' => ['required', lang('login_username')],
