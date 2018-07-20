@@ -37,6 +37,7 @@ class Model
 
     public function __set($key, $value)
     {
+        
         if (array_key_exists($key, $this->_data)){
             $this->_data[$key] = $value;
             $this->_dirty = true;
