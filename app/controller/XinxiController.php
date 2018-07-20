@@ -26,10 +26,23 @@ class XinxiController extends UserController
 
 }
     public function address() {
+    $this->is_login = true;
+    $person = Person::get();
+    $address=v_list('address','*',array('isstate'=>1,'uid'=>$person->id));
+    return $this->view('address', compact('person','address'));
+
+}
+
+    public function address_pro() {
         $this->is_login = true;
         $person = Person::get();
-        $address=v_list('address','*',array('isstate'=>1));
-        return $this->view('address', compact('person','address'));
+        $id = isset($_GET['id']) ? (int)$_GET['id'] : '';
+        if($id){
+            $addressid=v_id($id,'*','address');
+        }else{
+            $addressid=array();
+        }
+        return $this->view('address_pro', compact('person','address'));
 
     }
     public function register()

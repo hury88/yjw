@@ -157,7 +157,7 @@ function createNewAddress(isCreate,province, city, country) {
     }
 }
 
-function initAddress(city,country,selectedProvince)
+function   (city,country,selectedProvince)
 {
     //初始化province
     var selectCities = -1;
